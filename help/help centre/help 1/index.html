@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaDesk Help Center</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">N</div>
+
+            <div>
+                <h2>NovaDesk</h2>
+                <span>Help Center</span>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#help">Help Center</a>
+            <a href="#articles">Articles</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+                <i data-lucide="moon"></i>
+            </button>
+
+            <button class="contact-btn" id="contactBtn">
+                Contact Support
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="help">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <i data-lucide="sparkles"></i>
+                How can we help?
+            </div>
+
+            <h1>
+                Find answers.
+                <span>Get things done.</span>
+            </h1>
+
+            <p>
+                Search our knowledge base to find answers,
+                guides and helpful resources for NovaDesk.
+            </p>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <i data-lucide="search"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for articles, guides, or questions..."
+                    autocomplete="off"
+                >
+
+                <span class="search-shortcut">
+                    Ctrl K
+                </span>
+
+            </div>
+
+            <p class="search-hint">
+                Popular:
+                <button class="quick-search" data-search="Getting Started">
+                    Getting Started
+                </button>
+
+                <button class="quick-search" data-search="Billing">
+                    Billing
+                </button>
+
+                <button class="quick-search" data-search="Security">
+                    Security
+                </button>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="section" id="articles">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-label">
+                        EXPLORE
+                    </span>
+
+                    <h2>
+                        Browse by category
+                    </h2>
+                </div>
+
+                <p>
+                    Everything you need to get the most
+                    out of your workspace.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+
+                <!-- CATEGORY 1 -->
+
+                <div class="category-card">
+
+                    <div class="category-icon purple">
+                        <i data-lucide="rocket"></i>
+                    </div>
+
+                    <div class="category-content">
+
+                        <h3>Getting Started</h3>
+
+                        <p>
+                            Learn the basics and set up
+                            your NovaDesk workspace.
+                        </p>
+
+                        <span>
+                            12 articles →
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORY 2 -->
+
+                <div class="category-card">
+
+                    <div class="category-icon blue">
+                        <i data-lucide="layout-dashboard"></i>
+                    </div>
+
+                    <div class="category-content">
+
+                        <h3>Dashboard</h3>
+
+                        <p>
+                            Learn how to manage your
+                            dashboard and workspace.
+                        </p>
+
+                        <span>
+                            18 articles →
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORY 3 -->
+
+                <div class="category-card">
+
+                    <div class="category-icon green">
+                        <i data-lucide="users"></i>
+                    </div>
+
+                    <div class="category-content">
+
+                        <h3>Team & Collaboration</h3>
+
+                        <p>
+                            Invite teammates and manage
+                            workspace collaboration.
+                        </p>
+
+                        <span>
+                            15 articles →
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORY 4 -->
+
+                <div class="category-card">
+
+                    <div class="category-icon orange">
+                        <i data-lucide="credit-card"></i>
+                    </div>
+
+                    <div class="category-content">
+
+                        <h3>Billing & Plans</h3>
+
+                        <p>
+                            Manage subscriptions, invoices
+                            and payment information.
+                        </p>
+
+                        <span>
+                            10 articles →
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORY 5 -->
+
+                <div class="category-card">
+
+                    <div class="category-icon pink">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+
+                    <div class="category-content">
+
+                        <h3>Security</h3>
+
+                        <p>
+                            Learn about account security,
+                            privacy and permissions.
+                        </p>
+
+                        <span>
+                            9 articles →
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORY 6 -->
+
+                <div class="category-card">
+
+                    <div class="category-icon cyan">
+                        <i data-lucide="settings"></i>
+                    </div>
+
+                    <div class="category-content">
+
+                        <h3>Settings</h3>
+
+                        <p>
+                            Customize your profile,
+                            preferences and notifications.
+                        </p>
+
+                        <span>
+                            14 articles →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= POPULAR ARTICLES ================= -->
+
+        <section class="section popular-section">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-label">
+                        KNOWLEDGE BASE
+                    </span>
+
+                    <h2>
+                        Popular articles
+                    </h2>
+                </div>
+
+                <a href="#" class="view-all">
+                    View all articles →
+                </a>
+
+            </div>
+
+
+            <div class="articles-container">
+
+
+                <a href="#" class="article">
+
+                    <div class="article-icon">
+                        <i data-lucide="book-open"></i>
+                    </div>
+
+                    <div class="article-info">
+
+                        <h3>
+                            How to get started with NovaDesk
+                        </h3>
+
+                        <p>
+                            Learn how to create your workspace
+                            and start using NovaDesk.
+                        </p>
+
+                        <span>
+                            Getting Started · 5 min read
+                        </span>
+
+                    </div>
+
+                    <i
+                        data-lucide="arrow-up-right"
+                        class="article-arrow">
+                    </i>
+
+                </a>
+
+
+                <a href="#" class="article">
+
+                    <div class="article-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+
+                    <div class="article-info">
+
+                        <h3>
+                            How to invite team members
+                        </h3>
+
+                        <p>
+                            Add members to your workspace
+                            and manage their permissions.
+                        </p>
+
+                        <span>
+                            Team · 3 min read
+                        </span>
+
+                    </div>
+
+                    <i
+                        data-lucide="arrow-up-right"
+                        class="article-arrow">
+                    </i>
+
+                </a>
+
+
+                <a href="#" class="article">
+
+                    <div class="article-icon">
+                        <i data-lucide="credit-card"></i>
+                    </div>
+
+                    <div class="article-info">
+
+                        <h3>
+                            Understanding your subscription
+                        </h3>
+
+                        <p>
+                            Learn about plans, billing cycles
+                            and payment methods.
+                        </p>
+
+                        <span>
+                            Billing · 4 min read
+                        </span>
+
+                    </div>
+
+                    <i
+                        data-lucide="arrow-up-right"
+                        class="article-arrow">
+                    </i>
+
+                </a>
+
+
+                <a href="#" class="article">
+
+                    <div class="article-icon">
+                        <i data-lucide="shield"></i>
+                    </div>
+
+                    <div class="article-info">
+
+                        <h3>
+                            Keeping your account secure
+                        </h3>
+
+                        <p>
+                            Follow our recommended steps
+                            to keep your account protected.
+                        </p>
+
+                        <span>
+                            Security · 6 min read
+                        </span>
+
+                    </div>
+
+                    <i
+                        data-lucide="arrow-up-right"
+                        class="article-arrow">
+                    </i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FAQ ================= -->
+
+        <section class="section faq-section" id="faq">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        FAQ
+                    </span>
+
+                    <h2>
+                        Frequently asked questions
+                    </h2>
+
+                </div>
+
+                <p>
+                    Quick answers to common questions.
+                </p>
+
+            </div>
+
+
+            <div class="faq-container">
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            What is NovaDesk?
+                        </span>
+
+                        <i data-lucide="plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            NovaDesk is a SaaS workspace that
+                            helps teams organize projects,
+                            collaborate with teammates and
+                            manage their daily workflows.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            How do I create a workspace?
+                        </span>
+
+                        <i data-lucide="plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            After creating your account,
+                            follow the setup steps to create
+                            your workspace. You can customize
+                            its name, members and settings.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            Can I invite my team members?
+                        </span>
+
+                        <i data-lucide="plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. Open your workspace settings,
+                            select the team section and invite
+                            members using their email addresses.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            Can I change my subscription?
+                        </span>
+
+                        <i data-lucide="plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. You can upgrade or change
+                            your subscription from the billing
+                            section of your account settings.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            How can I contact support?
+                        </span>
+
+                        <i data-lucide="plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            You can contact our support team
+                            using the Contact Support button
+                            at the top of this page.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SUPPORT CTA ================= -->
+
+        <section class="support-section">
+
+            <div class="support-content">
+
+                <div class="support-icon">
+                    <i data-lucide="message-circle"></i>
+                </div>
+
+                <div>
+
+                    <h2>
+                        Still need help?
+                    </h2>
+
+                    <p>
+                        Our support team is ready to help
+                        you with any questions.
+                    </p>
+
+                </div>
+
+                <button
+                    class="support-btn"
+                    id="supportBtn">
+
+                    Contact Support
+
+                    <i data-lucide="arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <div class="logo-icon">
+                        N
+                    </div>
+
+                    <div>
+                        <h2>NovaDesk</h2>
+                        <span>Help Center</span>
+                    </div>
+
+                </div>
+
+                <p>
+                    Everything you need to get the most
+                    out of your workspace.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Product</h4>
+
+                <a href="#">Features</a>
+                <a href="#">Pricing</a>
+                <a href="#">Security</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Resources</h4>
+
+                <a href="#">Documentation</a>
+                <a href="#">Help Center</a>
+                <a href="#">Community</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Company</h4>
+
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Careers</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 NovaDesk. All rights reserved.
+            </span>
+
+            <span>
+                Built with HTML, CSS & JavaScript
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= CONTACT MODAL ================= -->
+
+    <div class="modal-overlay" id="modalOverlay">
+
+        <div class="modal">
+
+            <button
+                class="modal-close"
+                id="modalClose">
+
+                <i data-lucide="x"></i>
+
+            </button>
+
+            <div class="modal-icon">
+
+                <i data-lucide="headphones"></i>
+
+            </div>
+
+            <h2>
+                Contact Support
+            </h2>
+
+            <p>
+                Tell us how we can help and our support
+                team will get back to you.
+            </p>
+
+
+            <form id="supportForm">
+
+                <input
+                    type="text"
+                    placeholder="Your name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your email"
+                    required
+                >
+
+                <textarea
+                    placeholder="How can we help?"
+                    rows="4"
+                    required>
+                </textarea>
+
+                <button
+                    type="submit"
+                    class="submit-btn">
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+            <divs
+                id="successMessage"
+                class="success-message">
+
+                ✓ Message sent successfully!
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
