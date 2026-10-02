@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">
+        <div class="brand-icon">C</div>
+        <div>
+            <h2>CloudCal</h2>
+            <span>Workspace Calendar</span>
+        </div>
+    </div>
+
+    <div class="top-actions">
+        <button id="todayBtn">Today</button>
+        <button id="themeBtn">🌙</button>
+        <div class="avatar">T</div>
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <button class="create-btn" id="createBtn">
+            + Create Event
+        </button>
+
+        <nav>
+            <a class="active">📅 Calendar</a>
+            <a>📊 Analytics</a>
+            <a>👥 Team</a>
+            <a>⚙ Settings</a>
+        </nav>
+
+        <div class="mini-title">MY CALENDARS</div>
+
+        <label>
+            <input type="checkbox" checked>
+            Work
+        </label>
+
+        <label>
+            <input type="checkbox" checked>
+            Personal
+        </label>
+
+        <label>
+            <input type="checkbox" checked>
+            Meetings
+        </label>
+
+    </aside>
+
+
+    <main class="calendar-area">
+
+        <div class="calendar-header">
+
+            <div>
+                <h1 id="monthTitle">October 2026</h1>
+                <p>Manage your schedule and upcoming events</p>
+            </div>
+
+            <div class="calendar-controls">
+                <button id="prevBtn">‹</button>
+                <button id="nextBtn">›</button>
+            </div>
+
+        </div>
+
+
+        <div class="weekdays">
+            <div>MON</div>
+            <div>TUE</div>
+            <div>WED</div>
+            <div>THU</div>
+            <div>FRI</div>
+            <div>SAT</div>
+            <div>SUN</div>
+        </div>
+
+
+        <div class="calendar" id="calendar"></div>
+
+    </main>
+
+</div>
+
+
+<div class="modal" id="eventModal">
+
+    <div class="modal-box">
+
+        <button class="close" id="closeModal">×</button>
+
+        <h2>Create Event</h2>
+
+        <input
+            type="text"
+            id="eventName"
+            placeholder="Event name"
+        >
+
+        <input
+            type="date"
+            id="eventDate"
+        >
+
+        <button class="save-btn" id="saveEvent">
+            Save Event
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

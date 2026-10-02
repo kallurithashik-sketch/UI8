@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <span>◆</span> CalendarPro
+    </div>
+
+    <div class="header-actions">
+        <button id="themeBtn">🌙</button>
+        <div class="profile">T</div>
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="hero">
+
+        <div>
+            <span class="label">MY SCHEDULE</span>
+            <h1>October 2026</h1>
+            <p>Keep track of your upcoming meetings and tasks.</p>
+        </div>
+
+        <button id="addBtn" class="add-btn">
+            + Add Event
+        </button>
+
+    </section>
+
+
+    <section class="calendar-layout">
+
+        <div class="date-panel">
+
+            <div class="date-header">
+                <button id="prev">‹</button>
+                <strong id="selectedDate">Today</strong>
+                <button id="next">›</button>
+            </div>
+
+            <div class="days" id="days"></div>
+
+        </div>
+
+
+        <div class="agenda">
+
+            <div class="agenda-header">
+                <h2>Upcoming Events</h2>
+                <span id="eventCount">3 events</span>
+            </div>
+
+            <div id="eventList">
+
+                <div class="agenda-item">
+                    <div class="time">09:00</div>
+                    <div class="event-info">
+                        <h3>Daily Standup</h3>
+                        <p>Engineering Team · Meeting Room A</p>
+                    </div>
+                </div>
+
+                <div class="agenda-item">
+                    <div class="time">11:30</div>
+                    <div class="event-info">
+                        <h3>Product Discussion</h3>
+                        <p>Product Team · Online</p>
+                    </div>
+                </div>
+
+                <div class="agenda-item">
+                    <div class="time">15:00</div>
+                    <div class="event-info">
+                        <h3>Client Presentation</h3>
+                        <p>Marketing · Conference Room</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div class="modal" id="modal">
+
+    <div class="modal-box">
+
+        <button id="close">×</button>
+
+        <h2>Add Event</h2>
+
+        <input id="title" placeholder="Event title">
+
+        <input id="time" type="time">
+
+        <button id="save">Create Event</button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8fb;
+    color: #181923;
+    transition: 0.3s;
+}
+
+header {
+    height: 70px;
+    background: white;
+    border-bottom: 1px solid #e7e7ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff5b7f;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.header-actions button {
+    border: 1px solid #dddde6;
+    background: white;
+    border-radius: 8px;
+    padding: 9px;
+    cursor: pointer;
+}
+
+.profile {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ff5b7f;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    max-width: 1150px;
+    margin: auto;
+    padding: 60px 25px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 40px;
+}
+
+.label {
+    color: #ff5b7f;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 8px 0;
+}
+
+.hero p {
+    color: #777987;
+}
+
+.add-btn {
+    border: 0;
+    background: #ff5b7f;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.calendar-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+}
+
+.date-panel,
+.agenda {
+    background: white;
+    border: 1px solid #e4e4eb;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.date-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.date-header button {
+    border: 1px solid #dddde6;
+    background: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 7px;
+}
+
+.day {
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.day:hover {
+    background: #fff0f4;
+}
+
+.day.selected {
+    background: #ff5b7f;
+    color: white;
+}
+
+.agenda-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.agenda-header span {
+    font-size: 12px;
+    color: #ff5b7f;
+}
+
+.agenda-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eeeeF2;
+}
+
+.time {
+    color: #ff5b7f;
+    font-size: 13px;
+    font-weight: bold;
+    width: 50px;
+}
+
+.event-info h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.event-info p {
+    color: #818392;
+    font-size: 12px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+}
+
+.modal-box h2 {
+    margin-bottom: 20px;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #dddde6;
+    border-radius: 8px;
+}
+
+.modal-box button:last-child {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    background: #ff5b7f;
+    color: white;
+    border-radius: 8px;
+}
+
+#close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: 0;
+    background: none;
+    font-size: 24px;
+}
+
+body.dark {
+    background: #101117;
+    color: white;
+}
+
+body.dark header,
+body.dark .date-panel,
+body.dark .agenda,
+body.dark .modal-box {
+    background: #191b25;
+    border-color: #2d303d;
+}
+
+body.dark .header-actions button,
+body.dark .date-header button {
+    background: #232632;
+    color: white;
+}
+
+@media (max-width: 750px) {
+
+    .calendar-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+}

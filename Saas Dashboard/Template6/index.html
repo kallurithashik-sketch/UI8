@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Analytics Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="brand">
+        <div class="brand-mark">A</div>
+        <strong>Analytix</strong>
+    </div>
+
+    <div class="header-right">
+
+        <button id="themeBtn">
+            🌙
+        </button>
+
+        <button id="shareBtn">
+            ↗ Share
+        </button>
+
+        <div class="avatar">
+            T
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="page-heading">
+
+        <div>
+
+            <span>ANALYTICS</span>
+
+            <h1>
+                Performance Overview
+            </h1>
+
+            <p>
+                Monitor your business performance and
+                user engagement.
+            </p>
+
+        </div>
+
+        <div class="period">
+
+            <button class="period-active">
+                30D
+            </button>
+
+            <button>
+                90D
+            </button>
+
+            <button>
+                1Y
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- KPI -->
+
+    <section class="kpis">
+
+        <div class="kpi">
+
+            <div class="kpi-title">
+                Total Visitors
+                <span>↗</span>
+            </div>
+
+            <strong>128,430</strong>
+
+            <p>
+                <b>+18.2%</b>
+                compared to last period
+            </p>
+
+            <div class="mini-chart">
+                <i style="height:30%"></i>
+                <i style="height:45%"></i>
+                <i style="height:35%"></i>
+                <i style="height:60%"></i>
+                <i style="height:52%"></i>
+                <i style="height:75%"></i>
+                <i style="height:90%"></i>
+            </div>
+
+        </div>
+
+
+        <div class="kpi">
+
+            <div class="kpi-title">
+                Signups
+                <span>↗</span>
+            </div>
+
+            <strong>12,842</strong>
+
+            <p>
+                <b>+12.6%</b>
+                compared to last period
+            </p>
+
+            <div class="mini-chart blue">
+                <i style="height:50%"></i>
+                <i style="height:35%"></i>
+                <i style="height:60%"></i>
+                <i style="height:50%"></i>
+                <i style="height:70%"></i>
+                <i style="height:62%"></i>
+                <i style="height:85%"></i>
+            </div>
+
+        </div>
+
+
+        <div class="kpi">
+
+            <div class="kpi-title">
+                Conversion Rate
+                <span>↗</span>
+            </div>
+
+            <strong>8.42%</strong>
+
+            <p>
+                <b>+2.4%</b>
+                compared to last period
+            </p>
+
+            <div class="mini-chart green">
+                <i style="height:30%"></i>
+                <i style="height:40%"></i>
+                <i style="height:55%"></i>
+                <i style="height:50%"></i>
+                <i style="height:75%"></i>
+                <i style="height:65%"></i>
+                <i style="height:90%"></i>
+            </div>
+
+        </div>
+
+
+        <div class="kpi">
+
+            <div class="kpi-title">
+                Avg. Session
+                <span>↗</span>
+            </div>
+
+            <strong>4m 32s</strong>
+
+            <p>
+                <b>+6.8%</b>
+                compared to last period
+            </p>
+
+            <div class="mini-chart orange">
+                <i style="height:60%"></i>
+                <i style="height:40%"></i>
+                <i style="height:70%"></i>
+                <i style="height:50%"></i>
+                <i style="height:80%"></i>
+                <i style="height:65%"></i>
+                <i style="height:88%"></i>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANALYTICS -->
+
+    <section class="analytics-grid">
+
+        <div class="analytics-card large">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <h2>Traffic Overview</h2>
+
+                    <p>
+                        Visitors and page views
+                    </p>
+
+                </div>
+
+                <select id="trafficSelect">
+
+                    <option>Visitors</option>
+                    <option>Page Views</option>
+                    <option>Sessions</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="line-chart">
+
+                <div class="line-values">
+
+                    <span>40K</span>
+                    <span>30K</span>
+                    <span>20K</span>
+                    <span>10K</span>
+                    <span>0</span>
+
+                </div>
+
+                <div class="chart-area">
+
+                    <div class="chart-line"></div>
+
+                    <div class="chart-dots">
+
+                        <span style="left:5%; bottom:30%"></span>
+                        <span style="left:20%; bottom:42%"></span>
+                        <span style="left:35%; bottom:35%"></span>
+                        <span style="left:50%; bottom:60%"></span>
+                        <span style="left:65%; bottom:52%"></span>
+                        <span style="left:80%; bottom:75%"></span>
+                        <span style="left:95%; bottom:85%"></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="months">
+
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+                <span>Sun</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- DEVICE -->
+
+        <div class="analytics-card">
+
+            <div class="card-heading">
+
+                <div>
+                    <h2>Devices</h2>
+                    <p>Traffic by device</p>
+                </div>
+
+            </div>
+
+
+            <div class="device-chart">
+
+                <div class="circle">
+
+                    <div>
+                        <strong>128K</strong>
+                        <small>Visitors</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="device-list">
+
+                <div>
+                    <span>
+                        <i class="dot desktop"></i>
+                        Desktop
+                    </span>
+                    <strong>54%</strong>
+                </div>
+
+                <div>
+                    <span>
+                        <i class="dot mobile"></i>
+                        Mobile
+                    </span>
+                    <strong>38%</strong>
+                </div>
+
+                <div>
+                    <span>
+                        <i class="dot tablet"></i>
+                        Tablet
+                    </span>
+                    <strong>8%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOURCES -->
+
+    <section class="analytics-card sources">
+
+        <div class="card-heading">
+
+            <div>
+                <h2>Top Traffic Sources</h2>
+                <p>Where your visitors come from</p>
+            </div>
+
+            <button id="exportBtn">
+                Export CSV
+            </button>
+
+        </div>
+
+
+        <div class="source-list">
+
+            <div class="source">
+
+                <div class="source-name">
+                    <span>01</span>
+                    Google Search
+                </div>
+
+                <div class="source-bar">
+                    <div style="width:82%"></div>
+                </div>
+
+                <strong>42.8%</strong>
+
+            </div>
+
+
+            <div class="source">
+
+                <div class="source-name">
+                    <span>02</span>
+                    Direct
+                </div>
+
+                <div class="source-bar">
+                    <div style="width:64%"></div>
+                </div>
+
+                <strong>28.4%</strong>
+
+            </div>
+
+
+            <div class="source">
+
+                <div class="source-name">
+                    <span>03</span>
+                    Social Media
+                </div>
+
+                <div class="source-bar">
+                    <div style="width:42%"></div>
+                </div>
+
+                <strong>17.2%</strong>
+
+            </div>
+
+
+            <div class="source">
+
+                <div class="source-name">
+                    <span>04</span>
+                    Referral
+                </div>
+
+                <div class="source-bar">
+                    <div style="width:24%"></div>
+                </div>
+
+                <strong>11.6%</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
