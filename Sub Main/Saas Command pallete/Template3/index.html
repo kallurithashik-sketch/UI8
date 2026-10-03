@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SaaS Command Palette</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <span>⌘</span> FlowOS
+    </div>
+
+    <nav>
+        <a>Dashboard</a>
+        <a>Projects</a>
+        <a>Team</a>
+        <a>Settings</a>
+    </nav>
+
+    <button id="openPalette">
+        Ctrl K
+    </button>
+
+</header>
+
+
+<main>
+
+    <div class="hero">
+
+        <span>PRODUCTIVITY WORKSPACE</span>
+
+        <h1>
+            Everything you need,
+            <strong>one command away.</strong>
+        </h1>
+
+        <p>
+            Quickly navigate your workspace and perform
+            actions using the command palette.
+        </p>
+
+        <button class="command-btn" id="heroCommand">
+            Open Command Palette
+            <span>⌘ K</span>
+        </button>
+
+    </div>
+
+
+    <section class="cards">
+
+        <div class="card">
+            <span>📁</span>
+            <h3>Projects</h3>
+            <p>Manage your active projects.</p>
+        </div>
+
+        <div class="card">
+            <span>👥</span>
+            <h3>Team</h3>
+            <p>Manage your team members.</p>
+        </div>
+
+        <div class="card">
+            <span>📊</span>
+            <h3>Analytics</h3>
+            <p>View your workspace analytics.</p>
+        </div>
+
+    </section>
+
+</main>
+
+
+<div class="overlay" id="overlay">
+
+    <div class="palette">
+
+        <div class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                id="commandSearch"
+                placeholder="Search commands..."
+                autocomplete="off"
+            >
+
+            <kbd>ESC</kbd>
+
+        </div>
+
+
+        <div class="commands" id="commands">
+
+            <button data-command="Create new project">
+                <span>＋</span>
+                <div>
+                    <strong>Create new project</strong>
+                    <small>Start a new project</small>
+                </div>
+                <kbd>⌘ N</kbd>
+            </button>
+
+            <button data-command="Invite team member">
+                <span>👤</span>
+                <div>
+                    <strong>Invite team member</strong>
+                    <small>Add someone to your workspace</small>
+                </div>
+            </button>
+
+            <button data-command="View analytics">
+                <span>📊</span>
+                <div>
+                    <strong>View analytics</strong>
+                    <small>Open workspace analytics</small>
+                </div>
+            </button>
+
+            <button data-command="Open settings">
+                <span>⚙</span>
+                <div>
+                    <strong>Open settings</strong>
+                    <small>Manage application settings</small>
+                </div>
+            </button>
+
+            <button data-command="Switch theme">
+                <span>◐</span>
+                <div>
+                    <strong>Switch theme</strong>
+                    <small>Change appearance</small>
+                </div>
+            </button>
+
+        </div>
+
+
+        <div class="palette-footer">
+            <span>↑↓ Navigate</span>
+            <span>↵ Select</span>
+            <span>ESC Close</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

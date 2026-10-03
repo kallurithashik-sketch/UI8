@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f5f8;
+    color: #181a23;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+aside {
+    width: 230px;
+    background: #151720;
+    color: white;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.brand div {
+    width: 35px;
+    height: 35px;
+    background: #8b5cf6;
+    border-radius: 9px;
+    display: grid;
+    place-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+nav a {
+    padding: 12px;
+    color: #9699a7;
+    border-radius: 7px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+nav a.active,
+nav a:hover {
+    background: #252734;
+    color: white;
+}
+
+.bottom {
+    margin-top: auto;
+    border-top: 1px solid #292b37;
+    padding-top: 20px;
+}
+
+.bottom span {
+    display: block;
+    color: #777b8a;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.bottom strong {
+    font-size: 12px;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    height: 80px;
+    background: white;
+    border-bottom: 1px solid #e3e4ea;
+    padding: 0 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2 {
+    font-size: 18px;
+}
+
+header p {
+    color: #858795;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+header button {
+    background: #181a23;
+    color: white;
+    border: 0;
+    padding: 11px 17px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.welcome {
+    max-width: 850px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+.welcome > span {
+    color: #8b5cf6;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.welcome h1 {
+    font-size: 50px;
+    max-width: 600px;
+    line-height: 1.05;
+    margin: 15px 0 45px;
+}
+
+.welcome h1 strong {
+    color: #8b5cf6;
+}
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.quick-grid button {
+    text-align: left;
+    background: white;
+    border: 1px solid #e2e3ea;
+    border-radius: 12px;
+    padding: 22px;
+    cursor: pointer;
+}
+
+.quick-grid button:hover {
+    border-color: #8b5cf6;
+    transform: translateY(-2px);
+}
+
+.quick-grid span {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.quick-grid b {
+    display: block;
+    font-size: 14px;
+}
+
+.quick-grid small {
+    display: block;
+    color: #858795;
+    margin-top: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15,16,23,.55);
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.command-window {
+    width: 580px;
+    background: white;
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,.25);
+}
+
+.command-search {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 17px;
+    border-bottom: 1px solid #e7e7ec;
+}
+
+.command-search > span {
+    font-size: 22px;
+}
+
+.command-search input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+}
+
+.command-list {
+    padding: 8px;
+}
+
+.group-title {
+    padding: 10px;
+    font-size: 9px;
+    font-weight: bold;
+    color: #999ba7;
+    letter-spacing: 1px;
+}
+
+.command-list button {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-radius: 7px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.command-list button:hover {
+    background: #f1efff;
+}
+
+.command-list button span {
+    width: 20px;
+}
+
+.command-list button kbd {
+    margin-left: auto;
+}
+
+kbd {
+    background: #f0f1f5;
+    border: 1px solid #dddfe7;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 9px;
+    color: #777;
+}
+
+.command-window footer {
+    display: flex;
+    gap: 20px;
+    padding: 12px 17px;
+    border-top: 1px solid #e7e7ec;
+    color: #858795;
+    font-size: 10px;
+}
+
+@media (max-width: 700px) {
+
+    aside {
+        display: none;
+    }
+
+    header {
+        padding: 0 20px;
+    }
+
+    .welcome {
+        padding-top: 60px;
+    }
+
+    .welcome h1 {
+        font-size: 38px;
+    }
+
+    .quick-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .command-window {
+        width: 90%;
+    }
+}
