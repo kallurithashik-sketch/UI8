@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Orbit Help Center</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            O
+        </div>
+
+        <div>
+            <h2>Orbit</h2>
+            <span>Help Center</span>
+        </div>
+
+    </div>
+
+
+    <button class="close-sidebar" id="closeSidebar">
+        <i data-lucide="x"></i>
+    </button>
+
+
+    <!-- Workspace -->
+
+    <div class="workspace">
+
+        <div class="workspace-icon">
+            <i data-lucide="layers"></i>
+        </div>
+
+        <div>
+            <strong>Orbit Workspace</strong>
+            <span>Team account</span>
+        </div>
+
+        <i data-lucide="chevron-down"></i>
+
+    </div>
+
+
+    <!-- Navigation -->
+
+    <nav class="sidebar-nav">
+
+        <span class="nav-title">
+            GETTING STARTED
+        </span>
+
+        <a href="#overview" class="nav-link active">
+
+            <i data-lucide="home"></i>
+
+            Overview
+
+        </a>
+
+
+        <a href="#quickstart" class="nav-link">
+
+            <i data-lucide="rocket"></i>
+
+            Quick Start
+
+        </a>
+
+
+        <a href="#account" class="nav-link">
+
+            <i data-lucide="user"></i>
+
+            Account
+
+        </a>
+
+
+        <span class="nav-title">
+            PRODUCT
+        </span>
+
+
+        <a href="#projects" class="nav-link">
+
+            <i data-lucide="folder"></i>
+
+            Projects
+
+        </a>
+
+
+        <a href="#team" class="nav-link">
+
+            <i data-lucide="users"></i>
+
+            Team Management
+
+        </a>
+
+
+        <a href="#integrations" class="nav-link">
+
+            <i data-lucide="puzzle"></i>
+
+            Integrations
+
+        </a>
+
+
+        <span class="nav-title">
+            RESOURCES
+        </span>
+
+
+        <a href="#api" class="nav-link">
+
+            <i data-lucide="code-2"></i>
+
+            API & Developers
+
+        </a>
+
+
+        <a href="#security" class="nav-link">
+
+            <i data-lucide="shield"></i>
+
+            Security
+
+        </a>
+
+
+        <a href="#billing" class="nav-link">
+
+            <i data-lucide="credit-card"></i>
+
+            Billing
+
+        </a>
+
+    </nav>
+
+
+    <!-- Sidebar Bottom -->
+
+    <div class="sidebar-bottom">
+
+        <a href="#" class="bottom-link">
+
+            <i data-lucide="message-circle"></i>
+
+            Community
+
+        </a>
+
+
+        <a href="#" class="bottom-link">
+
+            <i data-lucide="book-open"></i>
+
+            Documentation
+
+        </a>
+
+
+        <div class="sidebar-user">
+
+            <div class="user-avatar">
+                AM
+            </div>
+
+            <div>
+                <strong>Alex Morgan</strong>
+                <span>alex@example.com</span>
+            </div>
+
+            <button id="themeToggle">
+                <i data-lucide="moon"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main-content" id="overview">
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <button class="menu-btn" id="menuBtn">
+            <i data-lucide="menu"></i>
+        </button>
+
+
+        <div class="breadcrumbs">
+
+            <span>Help Center</span>
+
+            <i data-lucide="chevron-right"></i>
+
+            <strong>Overview</strong>
+
+        </div>
+
+
+        <div class="top-actions">
+
+            <button class="icon-btn" id="topThemeToggle">
+                <i data-lucide="sun-moon"></i>
+            </button>
+
+            <button class="support-top" id="openSupport">
+                Get Support
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================================
+         HERO SEARCH
+    ================================================== -->
+
+    <section class="search-hero">
+
+        <div class="hero-decoration decoration-one"></div>
+        <div class="hero-decoration decoration-two"></div>
+
+        <div class="search-content">
+
+            <span class="eyebrow">
+                ORBIT KNOWLEDGE BASE
+            </span>
+
+            <h1>
+                What can we
+                <span>help you find?</span>
+            </h1>
+
+            <p>
+                Search guides, documentation, tutorials,
+                and answers from our knowledge base.
+            </p>
+
+
+            <div class="main-search">
+
+                <i data-lucide="search"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search the knowledge base..."
+                >
+
+                <kbd>
+                    /
+                </kbd>
+
+            </div>
+
+
+            <div class="search-tags">
+
+                <span>Popular:</span>
+
+                <button data-search="getting started">
+                    Getting Started
+                </button>
+
+                <button data-search="team">
+                    Team
+                </button>
+
+                <button data-search="billing">
+                    Billing
+                </button>
+
+                <button data-search="api">
+                    API
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         QUICK ACCESS
+    ================================================== -->
+
+    <section class="content-section" id="quickstart">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    QUICK ACCESS
+                </span>
+
+                <h2>
+                    Start here
+                </h2>
+
+            </div>
+
+            <span class="article-count">
+                42 articles
+            </span>
+
+        </div>
+
+
+        <div class="quick-grid">
+
+
+            <article
+                class="quick-card searchable"
+                data-keywords="getting started setup account workspace">
+
+                <div class="quick-number">
+                    01
+                </div>
+
+                <div class="quick-icon purple">
+                    <i data-lucide="rocket"></i>
+                </div>
+
+                <h3>
+                    Getting Started
+                </h3>
+
+                <p>
+                    Everything you need to create your
+                    account and launch your first project.
+                </p>
+
+                <a href="#account">
+                    Explore guide
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </article>
+
+
+            <article
+                class="quick-card searchable"
+                data-keywords="projects create manage project workspace">
+
+                <div class="quick-number">
+                    02
+                </div>
+
+                <div class="quick-icon blue">
+                    <i data-lucide="folder-kanban"></i>
+                </div>
+
+                <h3>
+                    Manage Projects
+                </h3>
+
+                <p>
+                    Create projects, organize tasks and
+                    keep your team moving forward.
+                </p>
+
+                <a href="#projects">
+                    Explore guide
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </article>
+
+
+            <article
+                class="quick-card searchable"
+                data-keywords="team members invite collaboration">
+
+                <div class="quick-number">
+                    03
+                </div>
+
+                <div class="quick-icon green">
+                    <i data-lucide="users"></i>
+                </div>
+
+                <h3>
+                    Build Your Team
+                </h3>
+
+                <p>
+                    Invite members, assign roles and
+                    collaborate inside your workspace.
+                </p>
+
+                <a href="#team">
+                    Explore guide
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </article>
+
+
+            <article
+                class="quick-card searchable"
+                data-keywords="api developers integrations code">
+
+                <div class="quick-number">
+                    04
+                </div>
+
+                <div class="quick-icon orange">
+                    <i data-lucide="terminal"></i>
+                </div>
+
+                <h3>
+                    Developer Resources
+                </h3>
+
+                <p>
+                    Explore APIs, integrations and
+                    developer documentation.
+                </p>
+
+                <a href="#api">
+                    Explore guide
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ARTICLE LIST
+    ================================================== -->
+
+    <section class="content-section article-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    KNOWLEDGE BASE
+                </span>
+
+                <h2>
+                    Featured articles
+                </h2>
+
+            </div>
+
+            <button class="all-articles" id="allArticles">
+                View all
+                <i data-lucide="arrow-right"></i>
+            </button>
+
+        </div>
+
+
+        <div class="article-list">
+
+
+            <article
+                class="article-row searchable"
+                data-keywords="getting started create workspace setup">
+
+                <div class="article-type purple">
+                    <i data-lucide="play-circle"></i>
+                </div>
+
+                <div class="article-details">
+
+                    <div class="article-category">
+                        GETTING STARTED
+                    </div>
+
+                    <h3>
+                        Create your first Orbit workspace
+                    </h3>
+
+                    <p>
+                        Follow these steps to create your
+                        workspace and configure your first project.
+                    </p>
+
+                    <div class="article-meta">
+
+                        <span>
+                            <i data-lucide="clock-3"></i>
+                            4 min read
+                        </span>
+
+                        <span>
+                            Updated 2 days ago
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <i
+                    data-lucide="chevron-right"
+                    class="row-arrow">
+                </i>
+
+            </article>
+
+
+            <article
+                class="article-row searchable"
+                data-keywords="team invite members roles permissions">
+
+                <div class="article-type green">
+                    <i data-lucide="users"></i>
+                </div>
+
+                <div class="article-details">
+
+                    <div class="article-category">
+                        TEAM
+                    </div>
+
+                    <h3>
+                        Invite and manage team members
+                    </h3>
+
+                    <p>
+                        Learn how to invite teammates and
+                        configure workspace permissions.
+                    </p>
+
+                    <div class="article-meta">
+
+                        <span>
+                            <i data-lucide="clock-3"></i>
+                            5 min read
+                        </span>
+
+                        <span>
+                            Updated 5 days ago
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <i
+                    data-lucide="chevron-right"
+                    class="row-arrow">
+                </i>
+
+            </article>
+
+
+            <article
+                class="article-row searchable"
+                data-keywords="billing subscription payment invoices">
+
+                <div class="article-type orange">
+                    <i data-lucide="credit-card"></i>
+                </div>
+
+                <div class="article-details">
+
+                    <div class="article-category">
+                        BILLING
+                    </div>
+
+                    <h3>
+                        Understanding Orbit billing
+                    </h3>
+
+                    <p>
+                        Find information about plans,
+                        invoices, payments and subscriptions.
+                    </p>
+
+                    <div class="article-meta">
+
+                        <span>
+                            <i data-lucide="clock-3"></i>
+                            6 min read
+                        </span>
+
+                        <span>
+                            Updated 1 week ago
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <i
+                    data-lucide="chevron-right"
+                    class="row-arrow">
+                </i>
+
+            </article>
+
+
+            <article
+                class="article-row searchable"
+                data-keywords="api developers authentication token">
+
+                <div class="article-type blue">
+                    <i data-lucide="code-2"></i>
+                </div>
+
+                <div class="article-details">
+
+                    <div class="article-category">
+                        DEVELOPERS
+                    </div>
+
+                    <h3>
+                        Authenticate with the Orbit API
+                    </h3>
+
+                    <p>
+                        Learn how API authentication works
+                        and how to create access credentials.
+                    </p>
+
+                    <div class="article-meta">
+
+                        <span>
+                            <i data-lucide="clock-3"></i>
+                            8 min read
+                        </span>
+
+                        <span>
+                            Updated 2 weeks ago
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <i
+                    data-lucide="chevron-right"
+                    class="row-arrow">
+                </i>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         PRODUCT AREAS
+    ================================================== -->
+
+    <section class="content-section" id="projects">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    PRODUCT AREAS
+                </span>
+
+                <h2>
+                    Explore Orbit
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <div
+                class="product-card searchable"
+                data-keywords="projects tasks workflow">
+
+                <div class="product-icon purple">
+                    <i data-lucide="folder"></i>
+                </div>
+
+                <h3>
+                    Projects
+                </h3>
+
+                <p>
+                    Organize projects, tasks and
+                    workflows.
+                </p>
+
+                <span>
+                    16 articles
+                </span>
+
+            </div>
+
+
+            <div
+                class="product-card searchable"
+                data-keywords="team collaboration users">
+
+                <div class="product-icon green">
+                    <i data-lucide="users"></i>
+                </div>
+
+                <h3>
+                    Team
+                </h3>
+
+                <p>
+                    Manage members, roles and
+                    collaboration.
+                </p>
+
+                <span>
+                    12 articles
+                </span>
+
+            </div>
+
+
+            <div
+                class="product-card searchable"
+                data-keywords="integrations apps connection">
+
+                <div class="product-icon blue">
+                    <i data-lucide="puzzle"></i>
+                </div>
+
+                <h3>
+                    Integrations
+                </h3>
+
+                <p>
+                    Connect Orbit with the tools
+                    your team already uses.
+                </p>
+
+                <span>
+                    21 articles
+                </span>
+
+            </div>
+
+
+            <div
+                class="product-card searchable"
+                data-keywords="security privacy authentication">
+
+                <div class="product-icon red">
+                    <i data-lucide="shield-check"></i>
+                </div>
+
+                <h3>
+                    Security
+                </h3>
+
+                <p>
+                    Learn about privacy and
+                    account protection.
+                </p>
+
+                <span>
+                    9 articles
+                </span>
+
+            </div>
+
+
+            <div
+                class="product-card searchable"
+                data-keywords="billing plans payment">
+
+                <div class="product-icon orange">
+                    <i data-lucide="wallet-cards"></i>
+                </div>
+
+                <h3>
+                    Billing
+                </h3>
+
+                <p>
+                    Manage subscriptions and
+                    payment information.
+                </p>
+
+                <span>
+                    8 articles
+                </span>
+
+            </div>
+
+
+            <div
+                class="product-card searchable"
+                data-keywords="api developer documentation">
+
+                <div class="product-icon cyan">
+                    <i data-lucide="braces"></i>
+                </div>
+
+                <h3>
+                    API
+                </h3>
+
+                <p>
+                    Build custom integrations
+                    with Orbit APIs.
+                </p>
+
+                <span>
+                    25 articles
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CHANGELOG
+    ================================================== -->
+
+    <section class="content-section" id="integrations">
+
+        <div class="update-layout">
+
+
+            <div>
+
+                <span class="section-label">
+                    LATEST UPDATES
+                </span>
+
+                <h2>
+                    What's new
+                </h2>
+
+                <p class="update-description">
+                    Stay up to date with the latest
+                    Orbit features and improvements.
+                </p>
+
+            </div>
+
+
+            <div class="updates">
+
+
+                <div class="update-item">
+
+                    <div class="update-date">
+                        SEP
+                        <strong>28</strong>
+                    </div>
+
+                    <div>
+
+                        <span class="new-badge">
+                            NEW
+                        </span>
+
+                        <h3>
+                            Advanced project filters
+                        </h3>
+
+                        <p>
+                            Quickly find projects using
+                            customizable filters.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="update-item">
+
+                    <div class="update-date">
+                        SEP
+                        <strong>21</strong>
+                    </div>
+
+                    <div>
+
+                        <span class="improved-badge">
+                            IMPROVED
+                        </span>
+
+                        <h3>
+                            Faster team management
+                        </h3>
+
+                        <p>
+                            Team permissions are now
+                            easier to manage.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="update-item">
+
+                    <div class="update-date">
+                        SEP
+                        <strong>14</strong>
+                    </div>
+
+                    <div>
+
+                        <span class="new-badge">
+                            NEW
+                        </span>
+
+                        <h3>
+                            New API documentation
+                        </h3>
+
+                        <p>
+                            Explore the updated API
+                            reference and examples.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         SUPPORT
+    ================================================== -->
+
+    <section class="support-card">
+
+        <div class="support-decoration"></div>
+
+        <div class="support-icon">
+
+            <i data-lucide="headphones"></i>
+
+        </div>
+
+        <div class="support-text">
+
+            <span>
+                NEED MORE HELP?
+            </span>
+
+            <h2>
+                Talk to our support team.
+            </h2>
+
+            <p>
+                Can't find what you're looking for?
+                We're here to help.
+            </p>
+
+        </div>
+
+        <button id="supportButton">
+
+            Contact Support
+
+            <i data-lucide="arrow-right"></i>
+
+        </button>
+
+    </section>
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <div class="footer-brand">
+
+            <div class="brand-logo-small">
+                O
+            </div>
+
+            <strong>
+                Orbit Help Center
+            </strong>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#">Privacy</a>
+
+            <a href="#">Terms</a>
+
+            <a href="#">Status</a>
+
+            <a href="#">Contact</a>
+
+        </div>
+
+        <span class="copyright">
+            © 2026 Orbit Inc.
+        </span>
+
+    </footer>
+
+</main>
+
+
+<!-- =====================================================
+     SUPPORT MODAL
+===================================================== -->
+
+<div class="modal-overlay" id="modal">
+
+    <div class="support-modal">
+
+        <button
+            class="modal-close"
+            id="closeModal">
+
+            <i data-lucide="x"></i>
+
+        </button>
+
+
+        <div class="modal-icon">
+
+            <i data-lucide="message-square"></i>
+
+        </div>
+
+
+        <h2>
+            Contact Orbit Support
+        </h2>
+
+        <p>
+            Send us a message and our support
+            team will get back to you.
+        </p>
+
+
+        <form id="supportForm">
+
+            <label>
+                Name
+            </label>
+
+            <input
+                type="text"
+                placeholder="Your name"
+                required
+            >
+
+
+            <label>
+                Email
+            </label>
+
+            <input
+                type="email"
+                placeholder="you@example.com"
+                required
+            >
+
+
+            <label>
+                What can we help with?
+            </label>
+
+            <select required>
+
+                <option value="">
+                    Select a topic
+                </option>
+
+                <option>
+                    Getting Started
+                </option>
+
+                <option>
+                    Account
+                </option>
+
+                <option>
+                    Billing
+                </option>
+
+                <option>
+                    Technical Issue
+                </option>
+
+            </select>
+
+
+            <label>
+                Message
+            </label>
+
+            <textarea
+                rows="4"
+                placeholder="Describe your question..."
+                required>
+            </textarea>
+
+
+            <button
+                type="submit"
+                class="send-button">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+
+        <div
+            class="form-success"
+            id="formSuccess">
+
+            <i data-lucide="check-circle"></i>
+
+            Thanks! Your message has been sent.
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
