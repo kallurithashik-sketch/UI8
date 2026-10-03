@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nexora — Billing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="brand">
+      <div class="brand-logo">n</div>
+      <span>Nexora</span>
+    </div>
+
+    <nav class="navigation">
+
+      <a href="#" data-page="Dashboard">
+        <span>⌂</span>
+        Dashboard
+      </a>
+
+      <a href="#" data-page="Projects">
+        <span>▣</span>
+        Projects
+      </a>
+
+      <a href="#" data-page="Analytics">
+        <span>⌁</span>
+        Analytics
+      </a>
+
+      <a href="#" data-page="Team">
+        <span>♧</span>
+        Team
+      </a>
+
+      <a href="#" class="active" data-page="Billing">
+        <span>▤</span>
+        Billing
+      </a>
+
+      <a href="#" data-page="Settings">
+        <span>⚙</span>
+        Settings
+      </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+      <div class="spark">✦</div>
+
+      <h4>
+        Build more.<br>
+        Worry less.
+      </h4>
+
+      <p>
+        Focus on what matters.<br>
+        We'll handle the billing.
+      </p>
+
+    </div>
+
+  </aside>
+
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+
+      <div class="search-box">
+        <span>⌕</span>
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search anything..."
+        >
+      </div>
+
+      <div class="top-actions">
+
+        <button
+          class="notification"
+          id="notificationBtn"
+        >
+          ♧
+          <i></i>
+        </button>
+
+        <button class="profile" id="profileBtn">
+
+          <span class="avatar">S</span>
+
+          <span class="profile-name">
+            Saran
+          </span>
+
+          <span>⌄</span>
+
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+    <section class="content">
+
+      <div class="page-heading">
+
+        <h1>Billing</h1>
+
+        <p>
+          Manage your subscription, payments and invoices.
+        </p>
+
+      </div>
+
+
+      <div class="dashboard-grid">
+
+
+        <!-- CURRENT PLAN -->
+        <section class="card plan-card">
+
+          <div class="card-title">
+            Current Plan
+          </div>
+
+          <div class="plan-content">
+
+            <div class="plan-icon">
+              ♛
+            </div>
+
+            <div class="plan-info">
+
+              <div class="plan-name">
+
+                Pro Plan
+
+                <span class="status">
+                  <b></b>
+                  Active
+                </span>
+
+              </div>
+
+              <div class="price">
+                ₹999
+                <small>/ month</small>
+              </div>
+
+              <p>
+                Next billing date: Oct 28, 2026
+              </p>
+
+              <div class="button-group">
+
+                <button
+                  class="btn dark"
+                  id="managePlan"
+                >
+                  Manage Plan
+                </button>
+
+                <button
+                  class="btn light"
+                  id="upgradeBtn"
+                >
+                  Upgrade
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <div class="plan-graphic">
+
+              <div class="graphic-glow"></div>
+
+              <div class="mini-card">
+
+                ♛
+
+                <hr>
+                <hr>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- PAYMENT -->
+        <section class="card payment-card">
+
+          <div class="card-title">
+            Payment Method
+          </div>
+
+          <div class="payment-method">
+
+            <strong class="visa">
+              VISA
+            </strong>
+
+            <span>
+              •••• 4281
+              <br>
+
+              <small>
+                Expires 08/28
+              </small>
+            </span>
+
+            <button
+              class="link-button"
+              id="editPayment"
+            >
+              Edit
+            </button>
+
+          </div>
+
+
+          <button
+            class="add-payment"
+            id="addPayment"
+          >
+            ＋ Add another payment method
+          </button>
+
+        </section>
+
+
+        <!-- USAGE -->
+        <section class="card usage-card">
+
+          <div class="section-header">
+
+            <div class="card-title">
+              Usage
+            </div>
+
+            <button
+              class="link-button"
+              id="detailsBtn"
+            >
+              View details →
+            </button>
+
+          </div>
+
+
+          <div class="usage-grid">
+
+
+            <!-- STORAGE -->
+            <div class="usage-item">
+
+              <div class="usage-label">
+
+                <span class="usage-icon">
+                  ◉
+                </span>
+
+                Storage
+
+              </div>
+
+              <strong>
+                72
+                <small>/ 100 GB</small>
+              </strong>
+
+              <div class="progress">
+                <span style="width:72%"></span>
+              </div>
+
+              <small>
+                72% used
+              </small>
+
+            </div>
+
+
+            <!-- TEAM -->
+            <div class="usage-item">
+
+              <div class="usage-label">
+
+                <span class="usage-icon">
+                  ♧
+                </span>
+
+                Team Members
+
+              </div>
+
+              <strong>
+                6
+                <small>/ 10</small>
+              </strong>
+
+              <div class="progress green">
+                <span style="width:60%"></span>
+              </div>
+
+              <small>
+                60% used
+              </small>
+
+            </div>
+
+
+            <!-- API -->
+            <div class="usage-item">
+
+              <div class="usage-label">
+
+                <span class="usage-icon">
+                  &lt;/&gt;
+                </span>
+
+                API Requests
+
+              </div>
+
+              <strong>
+                90K
+                <small>/ 100K</small>
+              </strong>
+
+              <div class="progress blue">
+                <span style="width:90%"></span>
+              </div>
+
+              <small>
+                90% used
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <!-- UPGRADE -->
+          <div class="upgrade-banner">
+
+            <div class="rocket">
+              🚀
+            </div>
+
+            <div>
+
+              <strong>
+                Need more? Upgrade to Enterprise
+              </strong>
+
+              <p>
+                Get more storage, advanced analytics,
+                priority support and more.
+              </p>
+
+            </div>
+
+            <button
+              class="btn purple"
+              id="enterpriseBtn"
+            >
+              View Plans →
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- BILLING HISTORY -->
+        <section class="card history-card">
+
+          <div class="section-header">
+
+            <div class="card-title">
+              Billing History
+            </div>
+
+            <button
+              class="link-button"
+              id="viewAll"
+            >
+              View all →
+            </button>
+
+          </div>
+
+
+          <div class="table-container">
+
+            <table>
+
+              <thead>
+
+                <tr>
+                  <th>Date</th>
+                  <th>Invoice No.</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+
+              </thead>
+
+
+              <tbody>
+
+                <tr>
+
+                  <td>Oct 02, 2026</td>
+
+                  <td>#INV-1024</td>
+
+                  <td>₹999</td>
+
+                  <td>
+                    <span class="paid">
+                      Paid
+                    </span>
+                  </td>
+
+                  <td>
+                    <button
+                      class="download"
+                      data-invoice="INV-1024"
+                    >
+                      ↓
+                    </button>
+                  </td>
+
+                </tr>
+
+
+                <tr>
+
+                  <td>Sep 02, 2026</td>
+
+                  <td>#INV-0987</td>
+
+                  <td>₹999</td>
+
+                  <td>
+                    <span class="paid">
+                      Paid
+                    </span>
+                  </td>
+
+                  <td>
+                    <button
+                      class="download"
+                      data-invoice="INV-0987"
+                    >
+                      ↓
+                    </button>
+                  </td>
+
+                </tr>
+
+
+                <tr>
+
+                  <td>Aug 02, 2026</td>
+
+                  <td>#INV-0951</td>
+
+                  <td>₹999</td>
+
+                  <td>
+                    <span class="paid">
+                      Paid
+                    </span>
+                  </td>
+
+                  <td>
+                    <button
+                      class="download"
+                      data-invoice="INV-0951"
+                    >
+                      ↓
+                    </button>
+                  </td>
+
+                </tr>
+
+
+                <tr>
+
+                  <td>Jul 02, 2026</td>
+
+                  <td>#INV-0870</td>
+
+                  <td>₹999</td>
+
+                  <td>
+                    <span class="paid">
+                      Paid
+                    </span>
+                  </td>
+
+                  <td>
+                    <button
+                      class="download"
+                      data-invoice="INV-0870"
+                    >
+                      ↓
+                    </button>
+                  </td>
+
+                </tr>
+
+
+                <tr>
+
+                  <td>Jun 02, 2026</td>
+
+                  <td>#INV-0756</td>
+
+                  <td>₹999</td>
+
+                  <td>
+                    <span class="paid">
+                      Paid
+                    </span>
+                  </td>
+
+                  <td>
+                    <button
+                      class="download"
+                      data-invoice="INV-0756"
+                    >
+                      ↓
+                    </button>
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+
+        <!-- BILLING SETTINGS -->
+        <section class="card settings-card">
+
+          <div class="settings-heading">
+
+            <div class="settings-icon">
+              ⚙
+            </div>
+
+            <div>
+
+              <strong>
+                Billing Settings
+              </strong>
+
+              <p>
+                Manage your billing information and preferences.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="settings-row">
+
+
+            <button>
+
+              <span>✉</span>
+
+              <small>
+                Billing email
+              </small>
+
+              <strong>
+                saran@company.com
+              </strong>
+
+            </button>
+
+
+            <button>
+
+              <span>▥</span>
+
+              <small>
+                Company details
+              </small>
+
+              <strong>
+                Not added
+              </strong>
+
+            </button>
+
+
+            <button>
+
+              <span>▤</span>
+
+              <small>
+                Tax / GST information
+              </small>
+
+              <strong>
+                Not added
+              </strong>
+
+            </button>
+
+
+            <button>
+
+              <span>＄</span>
+
+              <small>
+                Currency
+              </small>
+
+              <strong>
+                INR (₹)
+              </strong>
+
+            </button>
+
+
+            <button
+              id="autoRenew"
+              class="toggle-setting"
+            >
+
+              <span>⟳</span>
+
+              <small>
+                Auto-renewal
+              </small>
+
+              <strong>
+                Enabled
+              </strong>
+
+              <i class="toggle on"></i>
+
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- SUPPORT -->
+        <section class="card support-card">
+
+          <div class="support-icon">
+            ▤
+          </div>
+
+          <div>
+
+            <strong>
+              Need a custom invoice?
+            </strong>
+
+            <p>
+              Contact our support team and
+              we'll help you with your request.
+            </p>
+
+            <button
+              class="btn light"
+              id="supportBtn"
+            >
+              Contact Support
+            </button>
+
+          </div>
+
+        </section>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+
+<!-- TOAST -->
+<div
+  class="toast"
+  id="toast"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crew - Team management</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">crew<span></span></div>
+  <nav><a href="#">Projects</a><a href="#" class="on" aria-current="page">People</a><a href="#">Billing</a><a href="#">Settings</a></nav>
+  <button class="btn sun" id="open">+ Invite</button>
+</header>
+<main>
+  <h1>Your crew</h1>
+  <p class="sub">Add people, set what they can do, and keep seats under control.</p>
+  <section class="stats" aria-label="Summary">
+    <div class="stat"><b id="sM">0</b>Active members</div>
+    <div class="stat pink"><b id="sP">0</b>Waiting to join</div>
+    <div class="stat mint"><b id="sL">0</b>Seats left</div>
+  </section>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Search people" aria-label="Search
