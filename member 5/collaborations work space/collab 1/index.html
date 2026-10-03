@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UI 8 Workspace (Aurora)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="aur" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="toast" id="toast" role="status"></div>
+<div class="wrap">
+<header>
+  <section class="glass hello">
+    <small id="date"></small>
+    <h1>Good evening, UI 8 team.</h1>
+    <p>Four people are working on the launch. Drag a task to a new day to reschedule it.</p>
+    <div class="stats">
+      <div><b id="sOpen">0</b><span>tasks open</span></div>
+      <div><b id="sDone">0</b><span>tasks done</span></div>
+      <div><b>4</b><span>people online</span></div>
+    </div>
+  </section>
+  <section class="glass huddle" id="hud" aria-label="Team huddle">
+    <div class="faces">
+      <span class="ring"></span><span class="ring"></span>
+      <span class="face" style="background:var(--r);left:0;top:8px">MI</span>
+      <span class="face" style="background:var(--c);right:0;top:8px">DE</span>
+      <span class="face" style="background:var(--g);left:38px;bottom:0">AR</span>
+    </div>
+    <h2>Design review huddle</h2>
+    <p id="hs">3 people are here. Join to talk.</p>
+    <button class="pbtn" id="join">Join huddle</button>
+  </section>
+</header>
+
+<div class="tabs">
+ <section class="pane on" id="p-week">
+  <h2>This week</h2>
+  <div class="glass grid" id="grid"></div>
+  <p class="hint">Click a task to mark it in progress, then done. Click again to reset.</p>
+ </section>
+
+ <section class="pane" id="p-chat">
+  <h2>Team chat</h2>
+  <div class="glass chat">
+    <div id="msgs"></div>
+    <form class="send" id="sf"><input id="mi" placeholder="Write a message" aria-label="Message"><button class="pbtn">Send</button></form>
+  </div>
+ </section>
+
+ <section class="pane" id="p-files">
+  <h2>Files</h2>
+  <div class="files">
+    <div class="glass file"><div class="ic" style="background:var(--b1)">FIG</div><b>Pricing page v4</b><span>Edited by Mira, 12 min ago</span></div>
+    <div class="glass file"><div class="ic" style="background:var(--r)">DOC</div><b>Launch plan</b><span>Edited by You, today</span></div>
+    <div class="glass file"><div class="ic" style="background:var(--c)">CSV</div><b>Interview notes</b><span>Added by Arjun, yesterday</span></div>
+    <div class="glass file"><div class="ic" style="background:var(--g)">MP4</div><b>Onboarding demo</b><span>Added by Dev, 2 days ago</span></div>
+  </div>
+ </section>
+</div>
+</div>
+
+<nav class="glass dock" role="tablist" aria-label="Workspace sections">
+  <button role="tab" aria-selected="true" data-p="p-week">Week</button>
+  <button role="tab" aria-selected="false" data-p="p-chat">Chat</button>
+  <button role="tab" aria-selected="false" data-p="p-files">Files</button>
+  <button role="tab" aria-selected="false" id="theme">Theme</button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>

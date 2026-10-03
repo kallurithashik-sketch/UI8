@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTech Docs</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="glow glow-purple"></div>
+        <div class="glow glow-cyan"></div>
+
+        <header class="topbar">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">◇</span>
+                Web<span>Tech</span>
+                <small>Docs</small>
+            </a>
+
+            <nav class="top-nav">
+                <a href="#" class="active">Guides</a>
+                <a href="#">API Reference</a>
+                <a href="#">SDKs</a>
+                <a href="#">Changelog</a>
+            </nav>
+
+            <div class="spacer"></div>
+
+            <div class="search-box">
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search docs">
+
+                <span class="shortcut">⌘K</span>
+            </div>
+
+            <button class="api-button">
+                Get API key
+            </button>
+
+        </header>
+
+        <div class="layout">
+
+            <aside class="sidebar">
+
+                <div class="section-title">
+                    Getting started
+                </div>
+
+                <a href="#" class="side-link selected">
+                    Quickstart
+                </a>
+
+                <a href="#" class="side-link">
+                    Authentication
+                </a>
+
+                <a href="#" class="side-link">
+                    Core concepts
+                </a>
+
+                <div class="section-title">
+                    Build
+                </div>
+
+                <a href="#" class="side-link">
+                    Projects & environments
+                </a>
+
+                <a href="#" class="side-link">
+                    Webhooks
+                </a>
+
+                <a href="#" class="side-link">
+                    Event streaming
+                </a>
+
+                <a href="#" class="side-link">
+                    Rate limits
+                </a>
+
+                <div class="section-title">
+                    Platform
+                </div>
+
+                <a href="#" class="side-link">
+                    Teams & roles
+                </a>
+
+                <a href="#" class="side-link">
+                    Audit logs
+                </a>
+
+                <a href="#" class="side-link">
+                    Single sign-on
+                </a>
+
+            </aside>
+
+            <main class="main-content">
+
+                <div class="breadcrumb">
+                    <span>Guides</span>
+                    <span class="separator">Quickstart</span>
+                </div>
+
+                <div class="badge">
+                    <span></span>
+                    API v2 is live
+                </div>
+
+                <h1>
+                    Ship your first request
+                    <br>
+                    <span>in five minutes</span>
+                </h1>
+
+                <p class="intro">
+                    Install the SDK, add your key, and make a call
+                    to the Web Tech API. Everything below runs
+                    locally with a test key.
+                </p>
+
+                <div class="code-container">
+
+                    <div class="code-header">
+
+                        <button
+                            class="language active"
+                            data-language="node">
+                            Node
+                        </button>
+
+                        <button
+                            class="language"
+                            data-language="python">
+                            Python
+                        </button>
+
+                        <button
+                            class="language"
+                            data-language="curl">
+                            cURL
+                        </button>
+
+                        <div class="code-space"></div>
+
+                        <button
+                            id="copyButton"
+                            class="copy-button"
+                            title="Copy code">
+                            ⧉
+                        </button>
+
+                    </div>
+
+                    <pre id="codeBlock"><code>import { WebTech } from '@webtech/sdk';
+
+const wt = new WebTech({
+    apiKey: '[YOUR_API_KEY]'
+});
+
+const run = await wt.runs.create({
+    project: 'my-first-project',
+    input: 'Hello, Web Tech'
+});
+
+console.log(run.status);</code></pre>
+
+                </div>
+
+                <h2>
+                    Next steps
+                </h2>
+
+                <div class="cards">
+
+                    <a href="#" class="card">
+
+                        <div class="card-icon">
+                            🔒
+                        </div>
+
+                        <h3>
+                            Authentication
+                        </h3>
+
+                        <p>
+                            Scope keys per environment and
+                            rotate them safely.
+                        </p>
+
+                    </a>
+
+                    <a href="#" class="card">
+
+                        <div class="card-icon purple">
+                            ⚡
+                        </div>
+
+                        <h3>
+                            Webhooks
+                        </h3>
+
+                        <p>
+                            React to events in real time
+                            with signed payloads.
+                        </p>
+
+                    </a>
+
+                    <a href="#" class="card">
+
+                        <div class="card-icon">
+                            ◈
+                        </div>
+
+                        <h3>
+                            SDK reference
+                        </h3>
+
+                        <p>
+                            Typed clients and full method
+                            signatures.
+                        </p>
+
+                    </a>
+
+                </div>
+
+                <div class="info-box">
+
+                    <div class="info-icon">
+                        i
+                    </div>
+
+                    <div>
+                        <strong>Use a test key first.</strong>
+                        Test keys never touch production data,
+                        so you can experiment freely.
+                    </div>
+
+                </div>
+
+            </main>
+
+            <aside class="toc">
+
+                <div class="toc-title">
+                    On this page
+                </div>
+
+                <div class="toc-links">
+
+                    <a href="#" class="toc-active">
+                        Install the SDK
+                    </a>
+
+                    <a href="#">
+                        Make a request
+                    </a>
+
+                    <a href="#">
+                        Next steps
+                    </a>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
