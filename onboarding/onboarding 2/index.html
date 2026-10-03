@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaFlow — Onboarding</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+
+    <main class="onboarding-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-mark">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+
+                <span>NovaFlow</span>
+            </div>
+
+
+            <div class="sidebar-content">
+
+                <p class="setup-label">
+                    WORKSPACE SETUP
+                </p>
+
+
+                <div class="steps">
+
+                    <div class="side-step active" data-step="1">
+
+                        <div class="side-number">
+                            01
+                        </div>
+
+                        <div>
+                            <strong>Profile</strong>
+                            <span>Tell us about you</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="connector"></div>
+
+
+                    <div class="side-step" data-step="2">
+
+                        <div class="side-number">
+                            02
+                        </div>
+
+                        <div>
+                            <strong>Preferences</strong>
+                            <span>Customize your experience</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="connector"></div>
+
+
+                    <div class="side-step" data-step="3">
+
+                        <div class="side-number">
+                            03
+                        </div>
+
+                        <div>
+                            <strong>Integrations</strong>
+                            <span>Connect your tools</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="connector"></div>
+
+
+                    <div class="side-step" data-step="4">
+
+                        <div class="side-number">
+                            04
+                        </div>
+
+                        <div>
+                            <strong>Finish</strong>
+                            <span>You're ready to go</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="security-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+                        <strong>Your data is secure</strong>
+                        <span>Enterprise-grade encryption</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <section class="main-content">
+
+            <header class="top-header">
+
+                <div class="mobile-logo">
+                    <div class="logo-mark">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <span>NovaFlow</span>
+                </div>
+
+                <div class="progress-info">
+
+                    <span id="progressText">
+                        25% completed
+                    </span>
+
+                    <div class="progress-line">
+                        <div
+                            class="progress-fill"
+                            id="progressFill"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <button class="save-btn">
+                    <i class="fa-regular fa-bookmark"></i>
+                    Save & exit
+                </button>
+
+            </header>
+
+
+            <!-- ================= CONTENT ================= -->
+
+            <div class="content-area">
+
+
+                <!-- STEP 1 -->
+
+                <section
+                    class="content-step active"
+                    data-content="1"
+                >
+
+                    <div class="step-tag">
+                        <i class="fa-solid fa-user"></i>
+                        STEP 01
+                    </div>
+
+                    <h1>
+                        Let's make this
+                        <span>personal.</span>
+                    </h1>
+
+                    <p class="intro">
+                        A few details will help us create an experience
+                        that feels right for you and your team.
+                    </p>
+
+
+                    <div class="profile-layout">
+
+                        <div class="avatar-section">
+
+                            <div class="profile-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <button class="upload-btn">
+                                <i class="fa-solid fa-camera"></i>
+                                Add photo
+                            </button>
+
+                        </div>
+
+
+                        <div class="form-section">
+
+                            <div class="input-row">
+
+                                <div class="input-group">
+
+                                    <label>First name</label>
+
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        placeholder="Alex"
+                                    >
+
+                                </div>
+
+
+                                <div class="input-group">
+
+                                    <label>Last name</label>
+
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        placeholder="Morgan"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="input-group">
+
+                                <label>Job title</label>
+
+                                <input
+                                    type="text"
+                                    id="jobTitle"
+                                    placeholder="Product Designer"
+                                >
+
+                            </div>
+
+
+                            <div class="input-group">
+
+                                <label>Company / workspace</label>
+
+                                <input
+                                    type="text"
+                                    id="company"
+                                    placeholder="Acme Studio"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- STEP 2 -->
+
+                <section
+                    class="content-step"
+                    data-content="2"
+                >
+
+                    <div class="step-tag">
+                        <i class="fa-solid fa-sliders"></i>
+                        STEP 02
+                    </div>
+
+                    <h1>
+                        Make NovaFlow
+                        <span>yours.</span>
+                    </h1>
+
+                    <p class="intro">
+                        Choose your preferences. You can change these
+                        anytime from your workspace settings.
+                    </p>
+
+
+                    <div class="preference-list">
+
+                        <div class="preference">
+
+                            <div class="preference-icon purple">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+
+                            <div class="preference-info">
+
+                                <strong>Interface theme</strong>
+
+                                <span>
+                                    Choose how NovaFlow looks
+                                </span>
+
+                            </div>
+
+
+                            <div class="theme-options">
+
+                                <button
+                                    class="theme-option active"
+                                    data-theme="dark"
+                                >
+                                    <i class="fa-solid fa-moon"></i>
+                                    Dark
+                                </button>
+
+                                <button
+                                    class="theme-option"
+                                    data-theme="light"
+                                >
+                                    <i class="fa-solid fa-sun"></i>
+                                    Light
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="preference">
+
+                            <div class="preference-icon blue">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+
+                            <div class="preference-info">
+
+                                <strong>Working hours</strong>
+
+                                <span>
+                                    Set your preferred working time
+                                </span>
+
+                            </div>
+
+
+                            <select id="workingHours">
+
+                                <option>
+                                    9:00 AM — 5:00 PM
+                                </option>
+
+                                <option>
+                                    8:00 AM — 4:00 PM
+                                </option>
+
+                                <option>
+                                    10:00 AM — 6:00 PM
+                                </option>
+
+                                <option>
+                                    Flexible hours
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="preference">
+
+                            <div class="preference-icon green">
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+
+                            <div class="preference-info">
+
+                                <strong>Notifications</strong>
+
+                                <span>
+                                    Keep up with important updates
+                                </span>
+
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="notifications"
+                                    checked
+                                >
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="preference">
+
+                            <div class="preference-icon orange">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div class="preference-info">
+
+                                <strong>Product updates</strong>
+
+                                <span>
+                                    Receive occasional product news
+                                </span>
+
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="updates"
+                                >
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- STEP 3 -->
+
+                <section
+                    class="content-step"
+                    data-content="3"
+                >
+
+                    <div class="step-tag">
+                        <i class="fa-solid fa-plug"></i>
+                        STEP 03
+                    </div>
+
+                    <h1>
+                        Connect your
+                        <span>favorite tools.</span>
+                    </h1>
+
+                    <p class="intro">
+                        Bring your existing workflow into NovaFlow.
+                        You can connect more tools later.
+                    </p>
+
+
+                    <div class="integration-grid">
+
+                        <button class="integration-card">
+
+                            <div class="integration-logo slack">
+                                <i class="fa-brands fa-slack"></i>
+                            </div>
+
+                            <div>
+                                <strong>Slack</strong>
+                                <span>Team communication</span>
+                            </div>
+
+                            <span class="connect-status">
+                                Connect
+                            </span>
+
+                        </button>
+
+
+                        <button class="integration-card">
+
+                            <div class="integration-logo google">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+
+                            <div>
+                                <strong>Google Drive</strong>
+                                <span>Cloud storage</span>
+                            </div>
+
+                            <span class="connect-status">
+                                Connect
+                            </span>
+
+                        </button>
+
+
+                        <button class="integration-card">
+
+                            <div class="integration-logo github">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+
+                            <div>
+                                <strong>GitHub</strong>
+                                <span>Development workflow</span>
+                            </div>
+
+                            <span class="connect-status">
+                                Connect
+                            </span>
+
+                        </button>
+
+
+                        <button class="integration-card">
+
+                            <div class="integration-logo notion">
+                                N
+                            </div>
+
+                            <div>
+                                <strong>Notion</strong>
+                                <span>Knowledge management</span>
+                            </div>
+
+                            <span class="connect-status">
+                                Connect
+                            </span>
+
+                        </button>
+
+
+                        <button class="integration-card">
+
+                            <div class="integration-logo figma">
+                                <i class="fa-brands fa-figma"></i>
+                            </div>
+
+                            <div>
+                                <strong>Figma</strong>
+                                <span>Design collaboration</span>
+                            </div>
+
+                            <span class="connect-status">
+                                Connect
+                            </span>
+
+                        </button>
+
+
+                        <button class="integration-card">
+
+                            <div class="integration-logo zoom">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+
+                            <div>
+                                <strong>Zoom</strong>
+                                <span>Video meetings</span>
+                            </div>
+
+                            <span class="connect-status">
+                                Connect
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <p class="integration-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        You can skip this step and connect integrations later.
+                    </p>
+
+                </section>
+
+
+                <!-- STEP 4 -->
+
+                <section
+                    class="content-step finish-step"
+                    data-content="4"
+                >
+
+                    <div class="success-icon">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </div>
+
+                    <div class="step-tag">
+                        SETUP COMPLETE
+                    </div>
+
+                    <h1>
+                        You're ready to
+                        <span>create.</span>
+                    </h1>
+
+                    <p class="intro">
+                        Your NovaFlow workspace has been personalized
+                        and is ready for your first project.
+                    </p>
+
+
+                    <div class="summary-card">
+
+                        <div class="summary-header">
+                            <span>Your workspace</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>Member</span>
+
+                            <strong id="summaryName">
+                                Alex Morgan
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>Workspace</span>
+
+                            <strong id="summaryCompany">
+                                Acme Studio
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>Theme</span>
+
+                            <strong id="summaryTheme">
+                                Dark
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ready-message">
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        <span>
+                            Your personalized dashboard is waiting for you.
+                        </span>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer class="navigation">
+
+                <button
+                    class="back-button"
+                    id="backButton"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back
+                </button>
+
+
+                <span class="navigation-hint">
+                    <i class="fa-regular fa-clock"></i>
+                    Takes about 2 minutes
+                </span>
+
+
+                <button
+                    class="next-button"
+                    id="nextButton"
+                >
+                    Continue
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
