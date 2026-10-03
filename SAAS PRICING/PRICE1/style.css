@@ -1,0 +1,55 @@
+@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
+:root{
+  --bg:#f3f1fb;--panel:#ffffff;--ink:#17133a;--mute:#5d5886;--line:#d9d4f0;
+  --p1:#6a3df0;--p2:#00a7c4;--glow:rgba(106,61,240,.18);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#080620;--panel:#120f33;--ink:#ece9ff;--mute:#9a95c9;--line:#2a2563;
+  --p1:#8f6bff;--p2:#3de2ff;--glow:rgba(143,107,255,.28)}}
+:root[data-theme="dark"]{
+  --bg:#080620;--panel:#120f33;--ink:#ece9ff;--mute:#9a95c9;--line:#2a2563;
+  --p1:#8f6bff;--p2:#3de2ff;--glow:rgba(143,107,255,.28)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Manrope,system-ui,sans-serif;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;background-position:center top}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 0,transparent 0,var(--bg) 70%)}
+main{position:relative;max-width:1080px;margin:0 auto;padding:72px 20px 96px}
+h1,h2,.price{font-family:Unbounded,"Trebuchet MS",sans-serif}
+h1{font-weight:600;font-size:clamp(2rem,5.5vw,3.6rem);line-height:1.1;letter-spacing:-.02em;text-align:center;margin:0 auto 18px;max-width:16ch}
+.sub{text-align:center;color:var(--mute);max-width:46ch;margin:0 auto 36px}
+.toggle{display:flex;width:max-content;margin:0 auto 56px;padding:4px;border:1px solid var(--line);border-radius:999px;background:var(--panel)}
+.toggle button{font:700 14px Manrope,sans-serif;color:var(--mute);background:none;border:0;padding:10px 20px;border-radius:999px;cursor:pointer}
+.toggle button[aria-pressed="true"]{color:#fff;background:linear-gradient(120deg,var(--p1),var(--p2))}
+.toggle button:focus-visible,.cta:focus-visible,summary:focus-visible{outline:2px solid var(--p2);outline-offset:3px}
+.save{font-weight:500;opacity:.85;margin-left:6px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:32px 28px;display:flex;flex-direction:column}
+.plan.hot{border:0;padding:33px 29px;margin:-12px 0;
+  background:linear-gradient(var(--panel),var(--panel)) padding-box,conic-gradient(from var(--a),var(--p1),var(--p2),var(--p1)) border-box;
+  border:1px solid transparent;box-shadow:0 0 70px var(--glow);animation:spin 7s linear infinite}
+@keyframes spin{to{--a:360deg}}
+.plan h2{font-size:1rem;font-weight:600;margin:0 0 6px}
+.plan p{margin:0 0 22px;color:var(--mute);font-size:.94rem}
+.price{font-size:2.6rem;font-weight:600;letter-spacing:-.03em;line-height:1}
+.price small{font:500 .85rem Manrope,sans-serif;color:var(--mute);letter-spacing:0}
+.bill{font-size:.82rem;color:var(--mute);margin:6px 0 24px;min-height:1.4em}
+.cta{display:block;text-align:center;text-decoration:none;font-weight:700;color:var(--ink);padding:13px;border:1px solid var(--line);border-radius:12px;margin-bottom:26px;transition:background .2s,border-color .2s}
+.cta:hover{border-color:var(--p1);background:var(--glow)}
+.hot .cta{color:#fff;border:0;background:linear-gradient(120deg,var(--p1),var(--p2))}
+.plan ul{list-style:none;margin:0;padding:22px 0 0;border-top:1px solid var(--line);display:grid;gap:12px;font-size:.94rem}
+.plan li{display:flex;gap:10px}
+.plan li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;border-radius:50%;background:var(--p2);box-shadow:0 0 8px var(--p2)}
+.faq{max-width:680px;margin:96px auto 0}
+.faq h2{font-size:1.3rem;margin:0 0 20px}
+details{border-top:1px solid var(--line);padding:16px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--p2);font-weight:700}
+details[open] summary::after{content:"\2212"}
+details p{margin:10px 0 0;color:var(--mute)}
+@media (max-width:860px){.plans{grid-template-columns:1fr}.plan.hot{margin:0}}
+@media (prefers-reduced-motion:reduce){.plan.hot{animation:none}}

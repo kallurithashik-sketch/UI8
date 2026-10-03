@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Team management</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<aside><div class="brand">Northwind</div><a href="#">Overview</a><a href="#" class="on" aria-current="page">Team</a><a href="#">Projects</a><a href="#">Billing</a><a href="#">Settings</a></aside>
+<main>
+<div class="top"><div><h1>Team</h1><p>Manage who has access to your workspace and what they can do.</p></div><button class="btn pri" id="inv">Invite member</button></div>
+
+<section class="seats" aria-label="Seat usage">
+<div class="row"><div><strong id="used">0</strong> <span style="color:var(--muted)">of 12 seats in use</span></div><button class="btn">Add seats</button></div>
+<div class="bar" id="bar"></div>
+<div class="legend"><span>Active members</span><span>Pending invites (reserve a seat)</span><span>Empty</span></div>
+</section>
+
+<form class="invite" id="form"><input type="email" id="em" placeholder="name@company.com" required aria-label="Email address"><select id="rl" aria-label="Role"></select><button class="btn pri">Send invite</button></form>
+
+<div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-t="m">Members</button><button role="tab" aria-selected="false" data-t="p">Pending invites</button><button role="tab" aria-selected="false" data-t="r">Roles</button></div>
+
+<div id="list">
+<div class="tools"><input id="q" type="search" placeholder="Search by name or email" aria-label="Search members"><select id="f" aria-label="Filter by role"><option value="">All roles</option></select></div>
+<div class="wrap"><table><thead><tr><th>Member</th><th>Role</th><th>Status</th><th>Last active</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+</div>
+<div id="roles" class="roles" hidden></div>
+</main>
+</div>
+<div id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>

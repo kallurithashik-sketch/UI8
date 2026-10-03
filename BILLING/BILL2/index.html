@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI — Billing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-box">UI</div>
+            <div>
+                <h2>UI</h2>
+                <span>Workspace</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="#">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#">
+                <span>▣</span>
+                Projects
+            </a>
+
+            <a href="#">
+                <span>◈</span>
+                Analytics
+            </a>
+
+            <a href="#">
+                <span>♧</span>
+                Team
+            </a>
+
+            <a href="#" class="active">
+                <span>◫</span>
+                Billing
+            </a>
+
+            <a href="#">
+                <span>⚙</span>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="help-icon">?</div>
+
+            <h4>Need help?</h4>
+
+            <p>
+                Our support team is<br>
+                ready to help you.
+            </p>
+
+            <button id="supportBtn">
+                Contact support
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- HEADER -->
+        <header>
+
+            <div class="header-left">
+
+                <button class="mobile-menu">
+                    ☰
+                </button>
+
+                <div class="search">
+
+                    <span>⌕</span>
+
+                    <input
+                        id="searchInput"
+                        type="text"
+                        placeholder="Search..."
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <button class="notification">
+                    ♧
+                    <b></b>
+                </button>
+
+                <div class="user">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div class="user-info">
+                        <strong>Saran</strong>
+                        <small>Admin</small>
+                    </div>
+
+                    <span>⌄</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="heading">
+
+                <div>
+                    <span class="eyebrow">
+                        ACCOUNT
+                    </span>
+
+                    <h1>Billing & Subscription</h1>
+
+                    <p>
+                        Manage your plan, payments and billing history.
+                    </p>
+                </div>
+
+                <button
+                    class="primary-btn"
+                    id="upgradeBtn"
+                >
+                    Upgrade plan
+                </button>
+
+            </div>
+
+
+            <!-- OVERVIEW -->
+            <div class="overview">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        ₹
+                    </div>
+
+                    <div>
+                        <span>Monthly spend</span>
+                        <strong>₹999</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ◷
+                    </div>
+
+                    <div>
+                        <span>Next payment</span>
+                        <strong>28 Oct</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+                        <span>Payment status</span>
+                        <strong class="green-text">
+                            Paid
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        %
+                    </div>
+
+                    <div>
+                        <span>Plan usage</span>
+                        <strong>72%</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAIN GRID -->
+            <div class="main-grid">
+
+
+                <!-- CURRENT PLAN -->
+                <section class="neo-card plan-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="label">
+                                CURRENT PLAN
+                            </span>
+
+                            <h2>UI Pro</h2>
+                        </div>
+
+                        <span class="active-badge">
+                            ● Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="price">
+
+                        <strong>
+                            ₹999
+                        </strong>
+
+                        <span>
+                            / month
+                        </span>
+
+                    </div>
+
+
+                    <p class="muted">
+                        Perfect for growing teams that need
+                        powerful workspace features.
+                    </p>
+
+
+                    <div class="plan-features">
+
+                        <div>
+                            <span>✓</span>
+                            100 GB Storage
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            10 Team Members
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            100K API Requests
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            Advanced Analytics
+                        </div>
+
+                    </div>
+
+
+                    <div class="plan-footer">
+
+                        <div>
+                            <small>Next billing date</small>
+                            <strong>October 28, 2026</strong>
+                        </div>
+
+                        <button
+                            class="secondary-btn"
+                            id="manageBtn"
+                        >
+                            Manage plan
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PAYMENT -->
+                <section class="neo-card payment-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="label">
+                                PAYMENT
+                            </span>
+
+                            <h2>Payment method</h2>
+                        </div>
+
+                        <button
+                            class="edit-btn"
+                            id="editPayment"
+                        >
+                            Edit
+                        </button>
+
+                    </div>
+
+
+                    <div class="bank-card">
+
+                        <div class="card-top">
+                            <span>UI PAY</span>
+                            <span>VISA</span>
+                        </div>
+
+                        <div class="card-number">
+                            •••• •••• •••• 4281
+                        </div>
+
+                        <div class="card-bottom">
+
+                            <span>
+                                SARAN
+                            </span>
+
+                            <span>
+                                08/28
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="add-card"
+                        id="addCard"
+                    >
+                        + Add payment method
+                    </button>
+
+                </section>
+
+
+                <!-- USAGE -->
+                <section class="neo-card usage-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="label">
+                                RESOURCE USAGE
+                            </span>
+
+                            <h2>Workspace usage</h2>
+                        </div>
+
+                        <span class="percentage">
+                            72%
+                        </span>
+
+                    </div>
+
+
+                    <div class="usage-list">
+
+
+                        <div class="usage">
+
+                            <div class="usage-top">
+
+                                <span>
+                                    Storage
+                                </span>
+
+                                <strong>
+                                    72 / 100 GB
+                                </strong>
+
+                            </div>
+
+                            <div class="bar">
+                                <span
+                                    style="width:72%"
+                                ></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="usage">
+
+                            <div class="usage-top">
+
+                                <span>
+                                    Team members
+                                </span>
+
+                                <strong>
+                                    6 / 10
+                                </strong>
+
+                            </div>
+
+                            <div class="bar green-bar">
+                                <span
+                                    style="width:60%"
+                                ></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="usage">
+
+                            <div class="usage-top">
+
+                                <span>
+                                    API requests
+                                </span>
+
+                                <strong>
+                                    90K / 100K
+                                </strong>
+
+                            </div>
+
+                            <div class="bar orange-bar">
+                                <span
+                                    style="width:90%"
+                                ></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="usage-message">
+
+                        <span>✦</span>
+
+                        <div>
+                            <strong>
+                                Running out of resources?
+                            </strong>
+
+                            <p>
+                                Upgrade your plan to unlock more capacity.
+                            </p>
+                        </div>
+
+                        <button id="usageUpgrade">
+                            Upgrade
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- INVOICES -->
+                <section class="neo-card invoices-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="label">
+                                TRANSACTIONS
+                            </span>
+
+                            <h2>Invoice history</h2>
+                        </div>
+
+                        <button
+                            class="edit-btn"
+                            id="viewAll"
+                        >
+                            View all
+                        </button>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                            <tr>
+                                <th>Date</th>
+                                <th>Invoice</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                            <tr>
+
+                                <td>Oct 02, 2026</td>
+
+                                <td>
+                                    #UI-1024
+                                </td>
+
+                                <td>
+                                    ₹999
+                                </td>
+
+                                <td>
+                                    <span class="paid">
+                                        Paid
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button
+                                        class="download"
+                                        data-id="UI-1024"
+                                    >
+                                        ↓
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>Sep 02, 2026</td>
+
+                                <td>
+                                    #UI-0987
+                                </td>
+
+                                <td>
+                                    ₹999
+                                </td>
+
+                                <td>
+                                    <span class="paid">
+                                        Paid
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button
+                                        class="download"
+                                        data-id="UI-0987"
+                                    >
+                                        ↓
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>Aug 02, 2026</td>
+
+                                <td>
+                                    #UI-0951
+                                </td>
+
+                                <td>
+                                    ₹999
+                                </td>
+
+                                <td>
+                                    <span class="paid">
+                                        Paid
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button
+                                        class="download"
+                                        data-id="UI-0951"
+                                    >
+                                        ↓
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>Jul 02, 2026</td>
+
+                                <td>
+                                    #UI-0870
+                                </td>
+
+                                <td>
+                                    ₹999
+                                </td>
+
+                                <td>
+                                    <span class="paid">
+                                        Paid
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button
+                                        class="download"
+                                        data-id="UI-0870"
+                                    >
+                                        ↓
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- BOTTOM -->
+            <div class="bottom-grid">
+
+
+                <div class="neo-card billing-info">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="label">
+                                BILLING DETAILS
+                            </span>
+
+                            <h2>Company information</h2>
+                        </div>
+
+                        <button
+                            class="edit-btn"
+                            id="companyEdit"
+                        >
+                            Edit
+                        </button>
+
+                    </div>
+
+
+                    <div class="info-grid">
+
+                        <div>
+                            <small>
+                                Company
+                            </small>
+
+                            <strong>
+                                UI Technologies
+                            </strong>
+                        </div>
+
+
+                        <div>
+                            <small>
+                                Billing email
+                            </small>
+
+                            <strong>
+                                billing@ui.com
+                            </strong>
+                        </div>
+
+
+                        <div>
+                            <small>
+                                Country
+                            </small>
+
+                            <strong>
+                                India
+                            </strong>
+                        </div>
+
+
+                        <div>
+                            <small>
+                                Currency
+                            </small>
+
+                            <strong>
+                                INR ₹
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="neo-card auto-card">
+
+                    <div class="auto-content">
+
+                        <div class="auto-icon">
+                            ↻
+                        </div>
+
+                        <div>
+                            <span class="label">
+                                SUBSCRIPTION
+                            </span>
+
+                            <h2>Auto-renewal</h2>
+
+                            <p>
+                                Your subscription renews automatically.
+                            </p>
+                        </div>
+
+                        <button
+                            class="toggle active"
+                            id="autoRenew"
+                        >
+                            <span></span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- TOAST -->
+<div
+    class="toast"
+    id="toast"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
