@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudly — Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <!-- Left Section -->
+        <section class="intro-section">
+            <div class="brand">
+                <div class="brand-icon">C</div>
+                <span>Cloudly</span>
+            </div>
+
+            <div class="intro-content">
+                <span class="eyebrow">SAAS PLATFORM</span>
+
+                <h1>
+                    Everything your team needs,
+                    <span>in one place.</span>
+                </h1>
+
+                <p>
+                    Manage your projects, collaborate with your team,
+                    and grow your business from a single workspace.
+                </p>
+
+                <div class="features">
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Simple team collaboration</span>
+                    </div>
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Secure cloud workspace</span>
+                    </div>
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Powerful productivity tools</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro-footer">
+                © 2026 Cloudly. All rights reserved.
+            </div>
+        </section>
+
+
+        <!-- Right Section -->
+        <section class="form-section">
+
+            <div class="auth-card">
+
+                <div class="mobile-brand">
+                    <div class="brand-icon">C</div>
+                    <span>Cloudly</span>
+                </div>
+
+                <div class="form-header">
+                    <h2 id="formTitle">Welcome back</h2>
+                    <p id="formSubtitle">
+                        Enter your details to access your workspace.
+                    </p>
+                </div>
+
+                <!-- Social Login -->
+                <button class="google-btn" type="button" id="googleBtn">
+                    <span class="google-icon">G</span>
+                    Continue with Google
+                </button>
+
+                <div class="divider">
+                    <span>or continue with email</span>
+                </div>
+
+                <!-- Authentication Form -->
+                <form id="authForm" novalidate>
+
+                    <!-- Name - Signup only -->
+                    <div class="form-group hidden" id="nameGroup">
+                        <label for="name">Full name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                        >
+                        <small class="error" id="nameError"></small>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                        >
+                        <small class="error" id="emailError"></small>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="password">Password</label>
+
+                            <a href="#" id="forgotPassword">
+                                Forgot password?
+                            </a>
+                        </div>
+
+                        <div class="password-wrapper">
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="passwordToggle"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+                        </div>
+
+                        <small class="error" id="passwordError"></small>
+                    </div>
+
+                    <!-- Remember Me -->
+                    <div class="remember-row" id="rememberRow">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="remember">
+                            <span>Remember me</span>
+                        </label>
+                    </div>
+
+                    <!-- Submit -->
+                    <button class="submit-btn" type="submit" id="submitBtn">
+                        Log in
+                    </button>
+
+                </form>
+
+                <!-- Switch Login / Signup -->
+                <p class="switch-text">
+                    <span id="switchMessage">Don't have an account?</span>
+
+                    <button type="button" id="switchMode">
+                        Create an account
+                    </button>
+                </p>
+
+                <div class="terms">
+                    By continuing, you agree to our
+                    <a href="#">Terms</a> and
+                    <a href="#">Privacy Policy</a>.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

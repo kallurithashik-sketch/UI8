@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowDesk — Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- Top Brand -->
+        <header class="topbar">
+            <a href="#" class="logo">
+                <span class="logo-mark">F</span>
+                <span>FlowDesk</span>
+            </a>
+
+            <p class="help-text">
+                Need help? <a href="#">Contact support</a>
+            </p>
+        </header>
+
+
+        <!-- Main -->
+        <main class="main-content">
+
+            <!-- Decorative Workspace Preview -->
+            <section class="preview-section">
+
+                <span class="badge">WORK SMARTER</span>
+
+                <h1>
+                    Your team's work,
+                    <span>beautifully organized.</span>
+                </h1>
+
+                <p class="preview-text">
+                    Bring projects, tasks and team conversations together
+                    in one simple workspace.
+                </p>
+
+                <div class="workspace-preview">
+
+                    <div class="preview-top">
+                        <div class="preview-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="preview-search">
+                            Search workspace...
+                        </div>
+
+                        <div class="preview-avatar">S</div>
+                    </div>
+
+                    <div class="preview-body">
+
+                        <aside class="preview-sidebar">
+                            <div class="side-line active"></div>
+                            <div class="side-line"></div>
+                            <div class="side-line"></div>
+                            <div class="side-line short"></div>
+
+                            <div class="side-gap"></div>
+
+                            <div class="side-line"></div>
+                            <div class="side-line short"></div>
+                        </aside>
+
+                        <div class="preview-dashboard">
+
+                            <div class="mini-heading">
+                                <div>
+                                    <small>OVERVIEW</small>
+                                    <h3>Team workspace</h3>
+                                </div>
+
+                                <span class="mini-button">+ New</span>
+                            </div>
+
+                            <div class="mini-cards">
+                                <div class="mini-card">
+                                    <span>Projects</span>
+                                    <strong>24</strong>
+                                </div>
+
+                                <div class="mini-card">
+                                    <span>Tasks</span>
+                                    <strong>128</strong>
+                                </div>
+
+                                <div class="mini-card">
+                                    <span>Members</span>
+                                    <strong>18</strong>
+                                </div>
+                            </div>
+
+                            <div class="activity-card">
+                                <div class="activity-title">
+                                    Recent activity
+                                </div>
+
+                                <div class="activity-line">
+                                    <span class="activity-avatar"></span>
+                                    <div></div>
+                                    <small></small>
+                                </div>
+
+                                <div class="activity-line">
+                                    <span class="activity-avatar"></span>
+                                    <div></div>
+                                    <small></small>
+                                </div>
+
+                                <div class="activity-line">
+                                    <span class="activity-avatar"></span>
+                                    <div></div>
+                                    <small></small>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- Authentication Card -->
+            <section class="auth-section">
+
+                <div class="auth-card">
+
+                    <div class="auth-heading">
+                        <h2 id="title">Sign in to FlowDesk</h2>
+                        <p id="subtitle">
+                            Welcome back. Please enter your details.
+                        </p>
+                    </div>
+
+
+                    <!-- Tabs -->
+                    <div class="tabs">
+                        <button
+                            type="button"
+                            class="tab active"
+                            id="loginTab"
+                        >
+                            Login
+                        </button>
+
+                        <button
+                            type="button"
+                            class="tab"
+                            id="signupTab"
+                        >
+                            Sign up
+                        </button>
+                    </div>
+
+
+                    <!-- Form -->
+                    <form id="authForm" novalidate>
+
+                        <!-- Name -->
+                        <div
+                            class="input-group hidden"
+                            id="nameGroup"
+                        >
+                            <label for="name">
+                                Full name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Alex Morgan"
+                                autocomplete="name"
+                            >
+
+                            <span
+                                class="error"
+                                id="nameError"
+                            ></span>
+                        </div>
+
+
+                        <!-- Email -->
+                        <div class="input-group">
+
+                            <label for="email">
+                                Work email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="alex@company.com"
+                                autocomplete="email"
+                            >
+
+                            <span
+                                class="error"
+                                id="emailError"
+                            ></span>
+
+                        </div>
+
+
+                        <!-- Password -->
+                        <div class="input-group">
+
+                            <div class="label-row">
+                                <label for="password">
+                                    Password
+                                </label>
+
+                                <a
+                                    href="#"
+                                    id="forgotPassword"
+                                >
+                                    Forgot password?
+                                </a>
+                            </div>
+
+                            <div class="password-box">
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                >
+
+                                <button
+                                    type="button"
+                                    id="togglePassword"
+                                >
+                                    Show
+                                </button>
+
+                            </div>
+
+                            <span
+                                class="error"
+                                id="passwordError"
+                            ></span>
+
+                            <!-- Strength -->
+                            <div
+                                class="strength hidden"
+                                id="strengthBox"
+                            >
+                                <div class="strength-bars">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <small id="strengthText">
+                                    Password strength
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Terms Signup -->
+                        <div
+                            class="terms-check hidden"
+                            id="termsBox"
+                        >
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="terms"
+                                >
+
+                                <span>
+                                    I agree to the
+                                    <a href="#">Terms</a>
+                                    and
+                                    <a href="#">Privacy Policy</a>.
+                                </span>
+                            </label>
+
+                            <span
+                                class="error"
+                                id="termsError"
+                            ></span>
+                        </div>
+
+
+                        <!-- Remember -->
+                        <div
+                            class="remember"
+                            id="rememberBox"
+                        >
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="remember"
+                                >
+                                <span>Keep me signed in</span>
+                            </label>
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="primary-btn"
+                            id="submitBtn"
+                        >
+                            Continue to workspace
+                        </button>
+
+                    </form>
+
+
+                    <!-- Divider -->
+                    <div class="or">
+                        <span>OR</span>
+                    </div>
+
+
+                    <!-- Other login -->
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="googleBtn"
+                    >
+                        <span class="google">G</span>
+                        Continue with Google
+                    </button>
+
+
+                    <p class="bottom-text">
+                        <span id="bottomMessage">
+                            New to FlowDesk?
+                        </span>
+
+                        <button
+                            type="button"
+                            id="bottomSwitch"
+                        >
+                            Create an account
+                        </button>
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer class="footer">
+            <span>© 2026 FlowDesk</span>
+
+            <div>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Security</a>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <div
+        class="toast"
+        id="toast"
+    ></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

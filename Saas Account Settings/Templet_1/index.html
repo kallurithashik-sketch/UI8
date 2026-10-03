@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit — Account Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="logo">
+            <span class="logo-icon">O</span>
+            <span>Orbit</span>
+        </div>
+
+        <nav class="navigation">
+
+            <p class="nav-title">WORKSPACE</p>
+
+            <a href="#" class="nav-link">
+                <span>▦</span>
+                Dashboard
+            </a>
+
+            <a href="#" class="nav-link">
+                <span>✓</span>
+                Projects
+            </a>
+
+            <a href="#" class="nav-link">
+                <span>◉</span>
+                Team
+            </a>
+
+            <p class="nav-title">ACCOUNT</p>
+
+            <a href="#" class="nav-link active">
+                <span>⚙</span>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="user-mini">
+                <div class="avatar">AM</div>
+
+                <div>
+                    <strong>Alex Morgan</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+    <main class="main">
+
+        <!-- Header -->
+        <header class="header">
+
+            <button
+                type="button"
+                class="menu-btn"
+                id="menuBtn"
+            >
+                ☰
+            </button>
+
+            <div>
+                <h1>Account Settings</h1>
+                <p>Manage your profile and account preferences.</p>
+            </div>
+
+            <div class="header-avatar">
+                AM
+            </div>
+
+        </header>
+
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- Settings Navigation -->
+            <aside class="settings-nav">
+
+                <button class="settings-link active" data-section="profile">
+                    <span>👤</span>
+                    Profile
+                </button>
+
+                <button class="settings-link" data-section="security">
+                    <span>🔒</span>
+                    Security
+                </button>
+
+                <button class="settings-link" data-section="notifications">
+                    <span>🔔</span>
+                    Notifications
+                </button>
+
+                <button class="settings-link" data-section="preferences">
+                    <span>⚙</span>
+                    Preferences
+                </button>
+
+            </aside>
+
+
+            <!-- Settings Panels -->
+            <section class="settings-content">
+
+                <!-- Profile -->
+                <div
+                    class="settings-panel active-panel"
+                    id="profile"
+                >
+
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Profile</h2>
+                            <p>Update your personal information.</p>
+                        </div>
+
+                        <button
+                            class="save-btn"
+                            id="saveProfile"
+                        >
+                            Save changes
+                        </button>
+                    </div>
+
+
+                    <div class="profile-photo">
+
+                        <div class="large-avatar">
+                            AM
+                        </div>
+
+                        <div>
+                            <h3>Profile photo</h3>
+                            <p>PNG, JPG or WEBP. Max 2MB.</p>
+
+                            <button
+                                type="button"
+                                class="outline-btn"
+                                id="changePhoto"
+                            >
+                                Change photo
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="firstName">
+                                First name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                value="Alex"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">
+                                Last name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                value="Morgan"
+                            >
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="email">
+                                Email address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                value="alex@orbitapp.com"
+                            >
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="jobTitle">
+                                Job title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="jobTitle"
+                                value="Product Designer"
+                            >
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="bio">
+                                Bio
+                            </label>
+
+                            <textarea
+                                id="bio"
+                                rows="4"
+                            >Designing simple digital experiences for growing teams.</textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Security -->
+                <div
+                    class="settings-panel"
+                    id="security"
+                >
+
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Security</h2>
+                            <p>Protect your account and manage access.</p>
+                        </div>
+                    </div>
+
+                    <div class="security-card">
+
+                        <div>
+                            <h3>Password</h3>
+                            <p>Last changed 24 days ago.</p>
+                        </div>
+
+                        <button
+                            class="outline-btn"
+                            id="changePassword"
+                        >
+                            Change password
+                        </button>
+
+                    </div>
+
+                    <div class="security-card">
+
+                        <div>
+                            <h3>Two-factor authentication</h3>
+                            <p>Add an extra layer of protection.</p>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="twoFactor"
+                            >
+                            <span></span>
+                        </label>
+
+                    </div>
+
+                    <div class="security-card danger-card">
+
+                        <div>
+                            <h3>Sign out of all devices</h3>
+                            <p>End all active sessions on other devices.</p>
+                        </div>
+
+                        <button
+                            class="danger-btn"
+                            id="logoutAll"
+                        >
+                            Sign out
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Notifications -->
+                <div
+                    class="settings-panel"
+                    id="notifications"
+                >
+
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Notifications</h2>
+                            <p>Choose how Orbit keeps you updated.</p>
+                        </div>
+                    </div>
+
+                    <div class="notification-row">
+                        <div>
+                            <h3>Project updates</h3>
+                            <p>Receive updates about your projects.</p>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="notification-row">
+                        <div>
+                            <h3>Team activity</h3>
+                            <p>Get notified when teammates make changes.</p>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="notification-row">
+                        <div>
+                            <h3>Weekly summary</h3>
+                            <p>Receive a weekly workspace report.</p>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
+                    </div>
+
+                </div>
+
+
+                <!-- Preferences -->
+                <div
+                    class="settings-panel"
+                    id="preferences"
+                >
+
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Preferences</h2>
+                            <p>Customize your workspace experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="preference-group">
+
+                        <label for="language">
+                            Language
+                        </label>
+
+                        <select id="language">
+                            <option>English</option>
+                            <option>Spanish</option>
+                            <option>French</option>
+                            <option>German</option>
+                        </select>
+
+                    </div>
+
+                    <div class="preference-group">
+
+                        <label for="timezone">
+                            Time zone
+                        </label>
+
+                        <select id="timezone">
+                            <option>GMT +05:30 — India</option>
+                            <option>GMT +00:00 — London</option>
+                            <option>GMT -05:00 — New York</option>
+                            <option>GMT +01:00 — Berlin</option>
+                        </select>
+
+                    </div>
+
+                    <div class="preference-group">
+
+                        <label>Appearance</label>
+
+                        <div class="theme-options">
+
+                            <button
+                                class="theme-btn active"
+                                data-theme="light"
+                            >
+                                ☀ Light
+                            </button>
+
+                            <button
+                                class="theme-btn"
+                                data-theme="dark"
+                            >
+                                ◐ Dark
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
