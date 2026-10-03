@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Shelf – Glass File Management</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <aside>
+
+            <div class="logo">
+                <i></i>
+                Shelf
+            </div>
+
+            <button class="upload" id="up">
+                Upload file
+            </button>
+
+            <nav id="nav"></nav>
+
+            <div class="quota">
+                <div class="bar">
+                    <b></b>
+                </div>
+
+                6.2 GB of 10 GB used
+                <br>
+
+                Upgrade for more space
+            </div>
+
+        </aside>
+
+        <main>
+
+            <div class="top">
+
+                <input
+                    class="search"
+                    id="q"
+                    type="search"
+                    placeholder="Search files and folders"
+                    aria-label="Search files"
+                >
+
+                <button class="tool" id="theme">
+                    Toggle theme
+                </button>
+
+            </div>
+
+            <div class="crumbs" id="title">
+                All files
+            </div>
+
+            <p class="sub" id="count"></p>
+
+            <div class="bar2" id="chips"></div>
+
+            <div class="wrap" id="wrap">
+
+                <div class="list" id="list"></div>
+
+                <aside
+                    class="panel"
+                    id="det"
+                    hidden
+                    style="display:none"
+                ></aside>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+    ></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

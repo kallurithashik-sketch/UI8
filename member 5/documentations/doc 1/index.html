@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>WebTech Docs – Quickstart</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <a class="logo" href="#">
+            <i></i>
+            WebTech Docs
+        </a>
+
+        <nav>
+            <a href="#">Guides</a>
+            <a href="#">API Reference</a>
+            <a href="#">SDKs</a>
+            <a href="#">Changelog</a>
+        </nav>
+
+        <div class="sp"></div>
+
+        <a class="key" href="#">
+            Get API key
+        </a>
+
+    </header>
+
+
+    <div class="wrap">
+
+        <aside class="side">
+
+            <b>Getting started</b>
+
+            <a class="on" href="#">
+                Quickstart
+            </a>
+
+            <a href="#">
+                Authentication
+            </a>
+
+            <a href="#">
+                Core concepts
+            </a>
+
+
+            <b>Build</b>
+
+            <a href="#">
+                Projects &amp; environments
+            </a>
+
+            <a href="#">
+                Webhooks
+            </a>
+
+            <a href="#">
+                Event streaming
+            </a>
+
+            <a href="#">
+                Rate limits
+            </a>
+
+
+            <b>Platform</b>
+
+            <a href="#">
+                Teams &amp; roles
+            </a>
+
+            <a href="#">
+                Audit logs
+            </a>
+
+            <a href="#">
+                Single sign-on
+            </a>
+
+        </aside>
+
+
+        <main>
+
+            <div class="crumb">
+                Guides
+                <b>Quickstart</b>
+            </div>
+
+
+            <h1>
+                Make your first request in
+                <span>five minutes</span>
+            </h1>
+
+
+            <p class="lede">
+                Install the SDK, add a test key, and run a call
+                against the WebTech API. API v2 is live,
+                and everything here works locally.
+            </p>
+
+
+            <h2 id="install">
+                Try it
+            </h2>
+
+
+            <ol class="steps">
+
+                <li>
+                    <span>
+                        Install the SDK with
+                        <code>npm i @webtech/sdk</code>
+                    </span>
+                </li>
+
+                <li>
+                    <span>
+                        Paste your test key in place of
+                        <code>YOUR_API_KEY</code>
+                    </span>
+                </li>
+
+                <li>
+                    <span>
+                        Press <b>Run</b> to see the response
+                    </span>
+                </li>
+
+            </ol>
+
+
+            <div class="term bx">
+
+                <div class="tb" role="tablist">
+
+                    <button
+                        role="tab"
+                        aria-selected="true"
+                        data-l="node">
+                        Node
+                    </button>
+
+                    <button
+                        role="tab"
+                        aria-selected="false"
+                        data-l="py">
+                        Python
+                    </button>
+
+                    <button
+                        role="tab"
+                        aria-selected="false"
+                        data-l="curl">
+                        cURL
+                    </button>
+
+                    <button
+                        class="cp"
+                        id="cp"
+                        aria-label="Copy code">
+                        Copy
+                    </button>
+
+                    <button
+                        class="run"
+                        id="run">
+                        Run
+                    </button>
+
+                </div>
+
+
+                <pre id="code"></pre>
+
+
+                <div
+                    class="out"
+                    id="out"
+                    aria-live="polite">
+
+                    <em>
+                        Press Run to send the request.
+                    </em>
+
+                </div>
+
+            </div>
+
+
+            <h2 id="next">
+                Next steps
+            </h2>
+
+
+            <div class="cards">
+
+                <a class="card bx" href="#">
+
+                    <h3>
+                        Authentication
+                    </h3>
+
+                    <p>
+                        Scope keys per environment
+                        and rotate them safely.
+                    </p>
+
+                </a>
+
+
+                <a class="card bx" href="#">
+
+                    <h3>
+                        Webhooks
+                    </h3>
+
+                    <p>
+                        React to events in real time
+                        with signed payloads.
+                    </p>
+
+                </a>
+
+
+                <a class="card bx" href="#">
+
+                    <h3>
+                        SDK reference
+                    </h3>
+
+                    <p>
+                        Typed clients and full method
+                        signatures.
+                    </p>
+
+                </a>
+
+            </div>
+
+
+            <div class="tip bx">
+
+                <i>!</i>
+
+                <div>
+                    <b>Use a test key first.</b>
+                    Test keys never touch production data,
+                    so you can experiment freely.
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <aside class="toc">
+
+            <b>
+                On this page
+            </b>
+
+            <div class="toc-links">
+
+                <a href="#install">
+                    Try it
+                </a>
+
+                <a href="#next">
+                    Next steps
+                </a>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
