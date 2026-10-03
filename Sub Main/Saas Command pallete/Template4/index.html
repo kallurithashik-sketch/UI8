@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Command Center</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside>
+
+        <div class="brand">
+            <div>Q</div>
+            QuickFlow
+        </div>
+
+        <nav>
+
+            <a class="active">⌂ Home</a>
+            <a>▣ Projects</a>
+            <a>◉ Tasks</a>
+            <a>♧ Team</a>
+            <a>⚙ Settings</a>
+
+        </nav>
+
+        <div class="bottom">
+            <span>Workspace</span>
+            <strong>Thashik's Team</strong>
+        </div>
+
+    </aside>
+
+
+    <main>
+
+        <header>
+
+            <div>
+                <h2>Command Center</h2>
+                <p>Control your workspace from one place.</p>
+            </div>
+
+            <button id="commandButton">
+                ⌘ Command
+            </button>
+
+        </header>
+
+
+        <section class="welcome">
+
+            <span>QUICK ACTIONS</span>
+
+            <h1>
+                What would you like
+                <strong>to do?</strong>
+            </h1>
+
+            <div class="quick-grid">
+
+                <button data-command="New Project">
+                    <span>＋</span>
+                    <b>New Project</b>
+                    <small>Create a project</small>
+                </button>
+
+                <button data-command="New Task">
+                    <span>✓</span>
+                    <b>New Task</b>
+                    <small>Create a task</small>
+                </button>
+
+                <button data-command="Invite Member">
+                    <span>♧</span>
+                    <b>Invite Member</b>
+                    <small>Add a teammate</small>
+                </button>
+
+                <button data-command="Open Analytics">
+                    <span>◈</span>
+                    <b>Analytics</b>
+                    <small>View statistics</small>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<div class="modal" id="commandModal">
+
+    <div class="command-window">
+
+        <div class="command-search">
+
+            <span>⌕</span>
+
+            <input
+                id="search"
+                placeholder="Type a command..."
+            >
+
+            <kbd>ESC</kbd>
+
+        </div>
+
+
+        <div class="command-list" id="commandList">
+
+            <div class="group-title">
+                SUGGESTED
+            </div>
+
+            <button data-command="Create new project">
+                <span>＋</span>
+                Create new project
+                <kbd>⌘ N</kbd>
+            </button>
+
+            <button data-command="Create new task">
+                <span>✓</span>
+                Create new task
+                <kbd>⌘ T</kbd>
+            </button>
+
+
+            <div class="group-title">
+                NAVIGATION
+            </div>
+
+            <button data-command="Go to dashboard">
+                <span>⌂</span>
+                Go to dashboard
+            </button>
+
+            <button data-command="Open settings">
+                <span>⚙</span>
+                Open settings
+            </button>
+
+            <button data-command="View team">
+                <span>♧</span>
+                View team
+            </button>
+
+        </div>
+
+        <footer>
+            <span>↑↓ Move</span>
+            <span>↵ Open</span>
+            <span>ESC Close</span>
+        </footer>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
