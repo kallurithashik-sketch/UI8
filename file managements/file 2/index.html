@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stackdrive – File Management</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sb">
+ <div class="logo"><i><svg viewBox="0 0 24 24" style="stroke:#fff"><path d="M4 7l8-4 8 4-8 4-8-4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></i>Stackdrive</div>
+ <button class="btn p" id="up" style="justify-content:center"><svg viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"/></svg>Upload files</button>
+ <nav id="nav"></nav>
+ <div class="sec">Team folders</div>
+ <nav id="fn"></nav>
+ <div class="store"><p>Storage</p><small>6.2 GB of 10 GB used</small>
+  <div class="seg"><i style="width:34%;background:#0f7b6c"></i><i style="width:18%;background:#2fa7d8"></i><i style="width:10%;background:#f5a524"></i></div>
+  <small>Documents · Media · Archives</small></div>
+</aside>
+<div class="mn">
+ <div class="tb">
+  <label class="srch"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" placeholder="Search files, folders, people" aria-label="Search"><kbd>/</kbd></label>
+  <span class="sp"></span>
+  <button class="ib" id="theme" aria-label="Toggle theme"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg></button>
+  <span class="av" style="background:#6d5dfc" title="You">AK</span>
+ </div>
+ <div class="ct" id="ct"></div>
+</div>
+</div>
+<div id="upl"></div>
+<div id="bk"></div>
+<script src="script.js"></script>
+</body>
+</html>
