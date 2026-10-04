@@ -1,799 +1,178 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>UI8 — Modern SaaS UI Templates</title>
+    <title>UI8 | Modern SaaS UI Templates</title>
 
-    <!-- Main Home Page CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- =========================
+         ANIMATED BACKGROUND
+    ========================== -->
+
+    <canvas id="connectionCanvas"></canvas>
+
+
+    <!-- =========================
+         NAVIGATION BAR
+    ========================== -->
 
     <header class="navbar">
 
-        <div class="logo">
-            <span class="logo-icon">UI</span>
-            <span>UI<span class="logo-highlight">8</span></span>
-        </div>
+        <a href="index.html" class="logo">
+            UI<span>8</span>
+        </a>
 
         <nav class="nav-links">
+
             <a href="#home">Home</a>
+
             <a href="#templates">Templates</a>
-            <a href="#categories">Categories</a>
+
+            <a href="#modules">Modules</a>
+
             <a href="#about">About</a>
+
         </nav>
 
-        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
-            🌙
+        <button id="themeToggle" class="theme-btn">
+            ◐
         </button>
 
     </header>
 
 
-    <!-- ================= MAIN ================= -->
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
 
-    <main>
+    <main id="home">
 
-        <!-- ================= HERO ================= -->
+        <section class="hero">
 
-        <section class="hero" id="home">
+            <div class="hero-content">
 
-            <div class="hero-badge">
-                ✦ Modern SaaS UI Collection
-            </div>
+                <div class="hero-badge">
+                    ✦ MODERN SAAS UI COLLECTION
+                </div>
 
-            <h1>
-                Modern UI templates for
-                <span>SaaS products.</span>
-            </h1>
+                <h1>
+                    Build Better.
+                    <br>
 
-            <p>
-                Explore a collection of modern, responsive and interactive
-                SaaS UI templates built with HTML, CSS and JavaScript.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#templates" class="primary-btn">
-                    Explore Templates →
-                </a>
-
-                <a href="#categories" class="secondary-btn">
-                    Browse Categories
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= STATS ================= -->
-
-        <section class="stats">
-
-            <div class="stat-card">
-                <h2>41+</h2>
-                <p>UI Templates</p>
-            </div>
-
-            <div class="stat-card">
-                <h2>20+</h2>
-                <p>Categories</p>
-            </div>
-
-            <div class="stat-card">
-                <h2>HTML</h2>
-                <p>CSS & JavaScript</p>
-            </div>
-
-            <div class="stat-card">
-                <h2>100%</h2>
-                <p>Responsive Design</p>
-            </div>
-
-        </section>
-
-
-        <!-- ================= TEMPLATES ================= -->
-
-        <section class="templates-section" id="templates">
-
-            <div class="section-heading">
-
-                <span class="section-label">
-                    OUR COLLECTION
-                </span>
-
-                <h2>
-                    Explore SaaS Templates
-                </h2>
+                    <span>Design Faster.</span>
+                </h1>
 
                 <p>
-                    Select a category and explore the available UI designs.
+                    A modern collection of beautiful SaaS UI templates
+                    designed for developers, designers and digital products.
                 </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#templates" class="primary-btn">
+                        Explore Templates
+                        <span>→</span>
+                    </a>
+
+                    <a href="#modules" class="secondary-btn">
+                        View Modules
+                    </a>
+
+                </div>
 
             </div>
 
 
-            <div class="template-grid">
+            <!-- Floating UI preview -->
 
+            <div class="hero-preview">
 
-                <!-- ================= LANDING ================= -->
+                <div class="preview-window">
 
-                <article class="template-card">
+                    <div class="window-top">
 
-                    <div class="template-icon">🚀</div>
+                        <div class="window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
 
-                    <span class="template-category">
-                        Landing
-                    </span>
-
-                    <h3>SaaS Landing Pages</h3>
-
-                    <p>
-                        Modern landing page designs for SaaS products.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="landing/landing 1/index.html">
-                            Landing 1 →
-                        </a>
-
-                        <a href="landing/landing 2/index.html">
-                            Landing 2 →
-                        </a>
+                        <div class="window-title">
+                            UI8 Dashboard
+                        </div>
 
                     </div>
 
-                </article>
+
+                    <div class="preview-content">
+
+                        <div class="preview-sidebar">
+
+                            <div class="side-logo">
+                                UI8
+                            </div>
+
+                            <div class="side-item active">
+                                ▦ Dashboard
+                            </div>
+
+                            <div class="side-item">
+                                □ Calendar
+                            </div>
+
+                            <div class="side-item">
+                                ◇ Analytics
+                            </div>
+
+                            <div class="side-item">
+                                ⚙ Settings
+                            </div>
+
+                        </div>
 
 
-                <!-- ================= BILLING ================= -->
+                        <div class="preview-main">
 
-                <article class="template-card">
+                            <div class="preview-heading">
+                                <small>OVERVIEW</small>
 
-                    <div class="template-icon">💳</div>
-
-                    <span class="template-category">
-                        Finance
-                    </span>
-
-                    <h3>Billing</h3>
-
-                    <p>
-                        Billing and payment management interfaces.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="BILLING/BILL1/index.html">
-                            Billing 1 →
-                        </a>
-
-                        <a href="BILLING/BILL2/index.html">
-                            Billing 2 →
-                        </a>
-
-                    </div>
-
-                </article>
+                                <h3>
+                                    Welcome back 👋
+                                </h3>
+                            </div>
 
 
-                <!-- ================= PRICING ================= -->
+                            <div class="preview-stats">
 
-                <article class="template-card">
+                                <div>
+                                    <small>Revenue</small>
+                                    <strong>$24.8K</strong>
+                                </div>
 
-                    <div class="template-icon">💰</div>
+                                <div>
+                                    <small>Users</small>
+                                    <strong>12.4K</strong>
+                                </div>
 
-                    <span class="template-category">
-                        Pricing
-                    </span>
-
-                    <h3>SaaS Pricing</h3>
-
-                    <p>
-                        Pricing page designs for SaaS subscription plans.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="SAAS PRICING/PRICE1/index.html">
-                            Pricing 1 →
-                        </a>
-
-                        <a href="SAAS PRICING/PRICE2/index.html">
-                            Pricing 2 →
-                        </a>
-
-                    </div>
-
-                </article>
+                            </div>
 
 
-                <!-- ================= LOGIN ================= -->
+                            <div class="preview-chart">
 
-                <article class="template-card">
+                                <div class="chart-line"></div>
 
-                    <div class="template-icon">🔐</div>
+                            </div>
 
-                    <span class="template-category">
-                        Authentication
-                    </span>
-
-                    <h3>Login & Signup</h3>
-
-                    <p>
-                        Clean authentication interfaces for SaaS applications.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="Saas Login & Signup/Templet_3/index.html">
-                            Login 1 →
-                        </a>
-
-                        <a href="Saas Login & Signup/Templet_4/index.html">
-                            Login 2 →
-                        </a>
+                        </div>
 
                     </div>
-
-                </article>
-
-
-                <!-- ================= ACCOUNT SETTINGS ================= -->
-
-                <article class="template-card">
-
-                    <div class="template-icon">⚙️</div>
-
-                    <span class="template-category">
-                        Settings
-                    </span>
-
-                    <h3>Account Settings</h3>
-
-                    <p>
-                        User account and profile management interfaces.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="Saas Account Settings/Templet_1/index.html">
-                            Settings 1 →
-                        </a>
-
-                        <a href="Saas Account Settings/Templet_2/index.html">
-                            Settings 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ================= USER MANAGEMENT ================= -->
-
-                <article class="template-card">
-
-                    <div class="template-icon">👥</div>
-
-                    <span class="template-category">
-                        Management
-                    </span>
-
-                    <h3>User Management</h3>
-
-                    <p>
-                        Interfaces for managing users, roles and permissions.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="Saas User Management/Templet_5/index.html">
-                            User Management 1 →
-                        </a>
-
-                        <a href="Saas User Management/Templet_6/index.html">
-                            User Management 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ================= TEAM MANAGEMENT ================= -->
-
-                <article class="template-card">
-
-                    <div class="template-icon">🧑‍💼</div>
-
-                    <span class="template-category">
-                        Collaboration
-                    </span>
-
-                    <h3>Team Management</h3>
-
-                    <p>
-                        Manage team members, roles and collaboration.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="TEAM MANAGEMENT/TEAM1/index.html">
-                            Team 1 →
-                        </a>
-
-                        <a href="TEAM MANAGEMENT/TEAM2/index.html">
-                            Team 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ================= CALENDAR ================= -->
-
-                <article class="template-card featured">
-
-                    <div class="template-icon">📅</div>
-
-                    <span class="template-category">
-                        Productivity
-                    </span>
-
-                    <h3>SaaS Calendar</h3>
-
-                    <p>
-                        Scheduling and calendar interfaces for SaaS applications.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="Sub Main/Saas Calender/Template1/index.html">
-                            Calendar 1 →
-                        </a>
-
-                        <a href="Sub Main/Saas Calender/Template2/index.html">
-                            Calendar 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ================= COMMAND PALETTE ================= -->
-
-                <article class="template-card">
-
-                    <div class="template-icon">⌘</div>
-
-                    <span class="template-category">
-                        Navigation
-                    </span>
-
-                    <h3>Command Palette</h3>
-
-                    <p>
-                        Fast command interfaces for modern SaaS applications.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="Sub Main/Saas Command pallete/Template3/index.html">
-                            Command 1 →
-                        </a>
-
-                        <a href="Sub Main/Saas Command pallete/Template4/index.html">
-                            Command 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ================= DASHBOARD ================= -->
-
-                <article class="template-card featured">
-
-                    <div class="template-icon">📊</div>
-
-                    <span class="template-category">
-                        Analytics
-                    </span>
-
-                    <h3>SaaS Dashboard</h3>
-
-                    <p>
-                        Analytics dashboards for monitoring business activity.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="Sub Main/Saas Dashboard/Template5/index.html">
-                            Dashboard 1 →
-                        </a>
-
-                        <a href="Sub Main/Saas Dashboard/Template6/index.html">
-                            Dashboard 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ================= COLLABORATION ================= -->
-
-                <article class="template-card">
-
-                    <div class="template-icon">🤝</div>
-
-                    <span class="template-category">
-                        Collaboration
-                    </span>
-
-                    <h3>Collaboration Workspace</h3>
-
-                    <p>
-                        Workspace interfaces for teams and collaborative work.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="collaborations work space/collab 1/index.html">
-                            Workspace 1 →
-                        </a>
-
-                        <a href="collaborations work space/collab 2/index.html">
-                            Workspace 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ================= DOCUMENTATION ================= -->
-
-                <article class="template-card">
-
-                    <div class="template-icon">📚</div>
-
-                    <span class="template-category">
-                        Resources
-                    </span>
-
-                    <h3>Documentation</h3>
-
-                    <p>
-                        Documentation and knowledge-base interfaces.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="documentations/doc 1/index.html">
-                            Documentation 1 →
-                        </a>
-
-                        <a href="documentations/doc 2/index.html">
-                            Documentation 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ================= FILE MANAGEMENT ================= -->
-
-                <article class="template-card">
-
-                    <div class="template-icon">📁</div>
-
-                    <span class="template-category">
-                        Productivity
-                    </span>
-
-                    <h3>File Management</h3>
-
-                    <p>
-                        File browsing and document management interfaces.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="file managements/file 1/index.html">
-                            File Manager 1 →
-                        </a>
-
-                        <a href="file managements/file 2/index.html">
-                            File Manager 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ================= HELP CENTER ================= -->
-
-                <article class="template-card">
-
-                    <div class="template-icon">❓</div>
-
-                    <span class="template-category">
-                        Support
-                    </span>
-
-                    <h3>Help Center</h3>
-
-                    <p>
-                        Customer support and knowledge-base interfaces.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="help centre/help 1/index.html">
-                            Help Center 1 →
-                        </a>
-
-                        <a href="help centre/help 2/index.html">
-                            Help Center 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ================= INTEGRATIONS ================= -->
-
-                <article class="template-card">
-
-                    <div class="template-icon">🔗</div>
-
-                    <span class="template-category">
-                        Integrations
-                    </span>
-
-                    <h3>Integrations</h3>
-
-                    <p>
-                        Connect SaaS applications with external services.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="integrations/int 1/index.html">
-                            Integration 1 →
-                        </a>
-
-                        <a href="integrations/int 2/index.html">
-                            Integration 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ================= ONBOARDING ================= -->
-
-                <article class="template-card">
-
-                    <div class="template-icon">✨</div>
-
-                    <span class="template-category">
-                        User Experience
-                    </span>
-
-                    <h3>Onboarding</h3>
-
-                    <p>
-                        User onboarding flows for new SaaS customers.
-                    </p>
-
-                    <div class="template-links">
-
-                        <a href="onboarding/onboarding 1/index.html">
-                            Onboarding 1 →
-                        </a>
-
-                        <a href="onboarding/onboarding 2/index.html">
-                            Onboarding 2 →
-                        </a>
-
-                        <a href="onboarding/onboarding1/index.html">
-                            Onboarding 3 →
-                        </a>
-
-                        <a href="onboarding/onboarding2/index.html">
-                            Onboarding 4 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= MEMBER 5 ================= -->
-
-        <section class="templates-section" id="categories">
-
-            <div class="section-heading">
-
-                <span class="section-label">
-                    ADDITIONAL COLLECTION
-                </span>
-
-                <h2>
-                    More Team Templates
-                </h2>
-
-                <p>
-                    Additional templates contributed to the project.
-                </p>
-
-            </div>
-
-
-            <div class="template-grid">
-
-
-                <article class="template-card">
-
-                    <div class="template-icon">🤝</div>
-
-                    <span class="template-category">
-                        Collaboration
-                    </span>
-
-                    <h3>Member 5 Workspace</h3>
-
-                    <div class="template-links">
-
-                        <a href="member 5/collaborations work space/collab 1/index.html">
-                            Workspace 1 →
-                        </a>
-
-                        <a href="member 5/collaborations work space/collab 2/index.html">
-                            Workspace 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card">
-
-                    <div class="template-icon">📚</div>
-
-                    <span class="template-category">
-                        Documentation
-                    </span>
-
-                    <h3>Member 5 Documentation</h3>
-
-                    <div class="template-links">
-
-                        <a href="member 5/documentations/doc 1/index.html">
-                            Documentation 1 →
-                        </a>
-
-                        <a href="member 5/documentations/doc 2/index.html">
-                            Documentation 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card">
-
-                    <div class="template-icon">📁</div>
-
-                    <span class="template-category">
-                        Files
-                    </span>
-
-                    <h3>Member 5 File Management</h3>
-
-                    <div class="template-links">
-
-                        <a href="member 5/file managements/file 1/index.html">
-                            File Manager 1 →
-                        </a>
-
-                        <a href="member 5/file managements/file 2/index.html">
-                            File Manager 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card">
-
-                    <div class="template-icon">🔗</div>
-
-                    <span class="template-category">
-                        Integrations
-                    </span>
-
-                    <h3>Member 5 Integrations</h3>
-
-                    <div class="template-links">
-
-                        <a href="member 5/integrations/int 1/index.html">
-                            Integration 1 →
-                        </a>
-
-                        <a href="member 5/integrations/int 2/index.html">
-                            Integration 2 →
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= ABOUT ================= -->
-
-        <section class="about-section" id="about">
-
-            <div class="about-content">
-
-                <span class="section-label">
-                    ABOUT UI8
-                </span>
-
-                <h2>
-                    Built for the Modern SaaS Experience
-                </h2>
-
-                <p>
-                    UI8 is a college team project that demonstrates
-                    different user interface patterns commonly used
-                    in modern SaaS applications.
-                </p>
-
-                <p>
-                    Each template is independently created using
-                    HTML, CSS and JavaScript with responsive layouts
-                    and interactive components.
-                </p>
-
-                <div class="technology-list">
-
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>Responsive Design</span>
-                    <span>GitHub</span>
 
                 </div>
 
@@ -801,43 +180,701 @@
 
         </section>
 
+
+        <!-- =========================
+             STATS
+        ========================== -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <strong>30+</strong>
+
+                <span>UI Templates</span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <strong>15+</strong>
+
+                <span>SaaS Modules</span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <strong>100%</strong>
+
+                <span>Responsive</span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <strong>∞</strong>
+
+                <span>Possibilities</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MODULE NETWORK
+        ========================== -->
+
+        <section id="modules" class="network-section">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    CONNECTED ECOSYSTEM
+                </div>
+
+                <h2>
+                    Everything you need.
+                    <span>Connected.</span>
+                </h2>
+
+                <p>
+                    Explore our complete SaaS ecosystem where
+                    every interface connects to another module.
+                </p>
+
+            </div>
+
+
+            <div class="network">
+
+                <!-- SVG animated connections -->
+
+                <svg
+                    class="connections"
+                    id="connectionSvg">
+
+                    <defs>
+
+                        <linearGradient
+                            id="lineGradient"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="100%">
+
+                            <stop offset="0%" />
+                            <stop offset="50%" />
+                            <stop offset="100%" />
+
+                        </linearGradient>
+
+                        <filter id="glow">
+
+                            <feGaussianBlur
+                                stdDeviation="3"
+                                result="blur"/>
+
+                            <feMerge>
+
+                                <feMergeNode
+                                    in="blur"/>
+
+                                <feMergeNode
+                                    in="SourceGraphic"/>
+
+                            </feMerge>
+
+                        </filter>
+
+                    </defs>
+
+                </svg>
+
+
+                <!-- MODULE 1 -->
+
+                <a
+                    href="landing/landing 1/index.html"
+                    class="module-card"
+                    id="module1">
+
+                    <div class="module-number">
+                        01
+                    </div>
+
+                    <div class="module-icon">
+                        ⌂
+                    </div>
+
+                    <h3>
+                        Landing
+                    </h3>
+
+                    <p>
+                        SaaS Landing Page
+                    </p>
+
+                    <span class="module-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- MODULE 2 -->
+
+                <a
+                    href="Saas Login & Signup/Templet_3/index.html"
+                    class="module-card"
+                    id="module2">
+
+                    <div class="module-number">
+                        02
+                    </div>
+
+                    <div class="module-icon">
+                        ↪
+                    </div>
+
+                    <h3>
+                        Authentication
+                    </h3>
+
+                    <p>
+                        Login & Signup
+                    </p>
+
+                    <span class="module-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- MODULE 3 -->
+
+                <a
+                    href="Sub Main/Saas Dashboard/Template5/index.html"
+                    class="module-card"
+                    id="module3">
+
+                    <div class="module-number">
+                        03
+                    </div>
+
+                    <div class="module-icon">
+                        ▦
+                    </div>
+
+                    <h3>
+                        Dashboard
+                    </h3>
+
+                    <p>
+                        SaaS Dashboard
+                    </p>
+
+                    <span class="module-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- MODULE 4 -->
+
+                <a
+                    href="Sub Main/Saas Calender/Template1/index.html"
+                    class="module-card"
+                    id="module4">
+
+                    <div class="module-number">
+                        04
+                    </div>
+
+                    <div class="module-icon">
+                        □
+                    </div>
+
+                    <h3>
+                        Calendar
+                    </h3>
+
+                    <p>
+                        Schedule Management
+                    </p>
+
+                    <span class="module-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- MODULE 5 -->
+
+                <a
+                    href="BILLING/BILL1/index.html"
+                    class="module-card"
+                    id="module5">
+
+                    <div class="module-number">
+                        05
+                    </div>
+
+                    <div class="module-icon">
+                        ₹
+                    </div>
+
+                    <h3>
+                        Billing
+                    </h3>
+
+                    <p>
+                        Payment Management
+                    </p>
+
+                    <span class="module-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- MODULE 6 -->
+
+                <a
+                    href="TEAM MANAGEMENT/TEAM1/index.html"
+                    class="module-card"
+                    id="module6">
+
+                    <div class="module-number">
+                        06
+                    </div>
+
+                    <div class="module-icon">
+                        ♙
+                    </div>
+
+                    <h3>
+                        Team
+                    </h3>
+
+                    <p>
+                        Team Management
+                    </p>
+
+                    <span class="module-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- MODULE 7 -->
+
+                <a
+                    href="integrations/int 1/index.html"
+                    class="module-card"
+                    id="module7">
+
+                    <div class="module-number">
+                        07
+                    </div>
+
+                    <div class="module-icon">
+                        ⌘
+                    </div>
+
+                    <h3>
+                        Integrations
+                    </h3>
+
+                    <p>
+                        App Integrations
+                    </p>
+
+                    <span class="module-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- MODULE 8 -->
+
+                <a
+                    href="file managements/file 1/index.html"
+                    class="module-card"
+                    id="module8">
+
+                    <div class="module-number">
+                        08
+                    </div>
+
+                    <div class="module-icon">
+                        ▤
+                    </div>
+
+                    <h3>
+                        Files
+                    </h3>
+
+                    <p>
+                        File Management
+                    </p>
+
+                    <span class="module-arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TEMPLATE COLLECTION
+        ========================== -->
+
+        <section
+            id="templates"
+            class="templates-section">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    TEMPLATE COLLECTION
+                </div>
+
+                <h2>
+                    Explore our
+                    <span>UI Templates</span>
+                </h2>
+
+                <p>
+                    Choose a template and start building your
+                    next SaaS product.
+                </p>
+
+            </div>
+
+
+            <div class="template-grid">
+
+
+                <a
+                    href="SAAS PRICING/PRICE1/index.html"
+                    class="template-card">
+
+                    <div class="template-top">
+
+                        <span>
+                            01
+                        </span>
+
+                        <span>
+                            PRICING
+                        </span>
+
+                    </div>
+
+                    <div class="template-icon">
+                        $
+                    </div>
+
+                    <h3>
+                        Pricing
+                    </h3>
+
+                    <p>
+                        Modern SaaS pricing pages.
+                    </p>
+
+                    <div class="template-link">
+                        Explore Template →
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="Saas Account Settings/Templet_1/index.html"
+                    class="template-card">
+
+                    <div class="template-top">
+
+                        <span>
+                            02
+                        </span>
+
+                        <span>
+                            SETTINGS
+                        </span>
+
+                    </div>
+
+                    <div class="template-icon">
+                        ⚙
+                    </div>
+
+                    <h3>
+                        Account Settings
+                    </h3>
+
+                    <p>
+                        Clean account management interface.
+                    </p>
+
+                    <div class="template-link">
+                        Explore Template →
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="Saas User Management/Templet_5/index.html"
+                    class="template-card">
+
+                    <div class="template-top">
+
+                        <span>
+                            03
+                        </span>
+
+                        <span>
+                            USERS
+                        </span>
+
+                    </div>
+
+                    <div class="template-icon">
+                        ♙
+                    </div>
+
+                    <h3>
+                        User Management
+                    </h3>
+
+                    <p>
+                        Manage users and permissions.
+                    </p>
+
+                    <div class="template-link">
+                        Explore Template →
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="documentations/doc 1/index.html"
+                    class="template-card">
+
+                    <div class="template-top">
+
+                        <span>
+                            04
+                        </span>
+
+                        <span>
+                            DOCS
+                        </span>
+
+                    </div>
+
+                    <div class="template-icon">
+                        ≡
+                    </div>
+
+                    <h3>
+                        Documentation
+                    </h3>
+
+                    <p>
+                        Beautiful documentation layouts.
+                    </p>
+
+                    <div class="template-link">
+                        Explore Template →
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="help centre/help 1/index.html"
+                    class="template-card">
+
+                    <div class="template-top">
+
+                        <span>
+                            05
+                        </span>
+
+                        <span>
+                            SUPPORT
+                        </span>
+
+                    </div>
+
+                    <div class="template-icon">
+                        ?
+                    </div>
+
+                    <h3>
+                        Help Center
+                    </h3>
+
+                    <p>
+                        Customer support and help pages.
+                    </p>
+
+                    <div class="template-link">
+                        Explore Template →
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="onboarding/onboarding 1/index.html"
+                    class="template-card">
+
+                    <div class="template-top">
+
+                        <span>
+                            06
+                        </span>
+
+                        <span>
+                            START
+                        </span>
+
+                    </div>
+
+                    <div class="template-icon">
+                        →
+                    </div>
+
+                    <h3>
+                        Onboarding
+                    </h3>
+
+                    <p>
+                        Smooth new-user experiences.
+                    </p>
+
+                    <div class="template-link">
+                        Explore Template →
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CALL TO ACTION
+        ========================== -->
+
+        <section class="cta">
+
+            <div class="cta-box">
+
+                <div class="cta-glow"></div>
+
+                <div class="section-label">
+                    START BUILDING
+                </div>
+
+                <h2>
+                    Your next product
+                    <span>starts here.</span>
+                </h2>
+
+                <p>
+                    Explore our collection of modern SaaS
+                    interfaces and create something amazing.
+                </p>
+
+                <a
+                    href="#templates"
+                    class="primary-btn">
+
+                    Explore UI8 →
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            id="about"
+            class="about">
+
+            <div class="section-label">
+                ABOUT UI8
+            </div>
+
+            <h2>
+                One collection.
+                <span>Infinite possibilities.</span>
+            </h2>
+
+            <p>
+                UI8 is a modern SaaS UI template collection
+                created to demonstrate collaborative web
+                development and modern interface design.
+            </p>
+
+        </section>
+
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
 
-        <div class="footer-content">
-
-            <div>
-                <strong>UI8</strong>
-
-                <p>
-                    Modern UI templates for SaaS applications.
-                </p>
-            </div>
-
-            <div class="footer-right">
-
-                <p>
-                    Built with HTML • CSS • JavaScript
-                </p>
-
-                <p>
-                    © 2026 UI8 — Modern SaaS UI Collection
-                </p>
-
-            </div>
-
+        <div class="footer-logo">
+            UI<span>8</span>
         </div>
+
+        <p>
+            Modern SaaS UI Template Collection
+        </p>
+
+        <p class="copyright">
+            © 2026 UI8. All rights reserved.
+        </p>
 
     </footer>
 
 
-    <!-- Main Home Page JavaScript -->
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
     <script src="script.js"></script>
 
 </body>
 </html>
-```
