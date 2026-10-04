@@ -1,178 +1,358 @@
-/* =========================================
-   MODERN SAAS UI COLLECTION
-   HOME PAGE JAVASCRIPT
-========================================= */
+document.addEventListener("DOMContentLoaded", function () {
+
+    const network = document.querySelector(".network");
+    const svg = document.getElementById("connectionSvg");
+
+    if (!network || !svg) {
+        return;
+    }
 
 
-// =========================================
-// THEME TOGGLE
-// =========================================
-
-const themeToggle = document.getElementById("themeToggle");
-
-
-// Check previously saved theme
-
-const savedTheme = localStorage.getItem("saas-theme");
-
-if (savedTheme === "dark") {
-
-    document.body.classList.add("dark-mode");
-
-    themeToggle.textContent = "☀️";
-
-}
+    const modules = [
+        "module1",
+        "module2",
+        "module3",
+        "module4",
+        "module5",
+        "module6",
+        "module7",
+        "module8"
+    ];
 
 
-// Toggle theme
+    /*
+        Which modules should connect?
+    */
 
-themeToggle.addEventListener("click", function () {
+    const connections = [
 
-    document.body.classList.toggle("dark-mode");
+        ["module1", "module2"],
+        ["module1", "module3"],
+
+        ["module2", "module3"],
+        ["module2", "module8"],
+
+        ["module8", "module3"],
+        ["module8", "module6"],
+
+        ["module3", "module4"],
+        ["module3", "module5"],
+
+        ["module3", "module6"],
+
+        ["module4", "module7"],
+
+        ["module5", "module6"],
+        ["module5", "module7"],
+
+        ["module6", "module8"],
+
+        ["module7", "module8"]
+
+    ];
 
 
-    const isDarkMode =
-        document.body.classList.contains("dark-mode");
+    /*
+        Create SVG connection line
+    */
+
+    function createLine(startElement, endElement) {
+
+        const startRect =
+            startElement.getBoundingClientRect();
+
+        const endRect =
+            endElement.getBoundingClientRect();
+
+        const networkRect =
+            network.getBoundingClientRect();
 
 
-    if (isDarkMode) {
+        const x1 =
+            startRect.left +
+            startRect.width / 2 -
+            networkRect.left;
 
-        themeToggle.textContent = "☀️";
 
-        localStorage.setItem("saas-theme", "dark");
+        const y1 =
+            startRect.top +
+            startRect.height / 2 -
+            networkRect.top;
 
-    } else {
 
-        themeToggle.textContent = "🌙";
+        const x2 =
+            endRect.left +
+            endRect.width / 2 -
+            networkRect.left;
 
-        localStorage.setItem("saas-theme", "light");
+
+        const y2 =
+            endRect.top +
+            endRect.height / 2 -
+            networkRect.top;
+
+
+        /*
+            Create curved path
+        */
+
+        const middleX =
+            (x1 + x2) / 2;
+
+
+        const middleY =
+            (y1 + y2) / 2;
+
+
+        const curveAmount = 35;
+
+
+        const path = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "path"
+        );
+
+
+        const d = `
+            M ${x1} ${y1}
+            Q ${middleX + curveAmount}
+              ${middleY - curveAmount}
+              ${x2} ${y2}
+        `;
+
+
+        path.setAttribute("d", d);
+
+        path.classList.add("connection-line");
+
+
+        svg.appendChild(path);
+
+
+        /*
+            Animated glowing dot
+        */
+
+        const dot =
+            document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "circle"
+            );
+
+
+        dot.setAttribute("r", "3");
+
+        dot.classList.add("connection-dot");
+
+
+        /*
+            Animate dot along path
+        */
+
+        const animate =
+            document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "animateMotion"
+            );
+
+
+        animate.setAttribute(
+            "dur",
+            (2 + Math.random() * 2) + "s"
+        );
+
+
+        animate.setAttribute(
+            "repeatCount",
+            "indefinite"
+        );
+
+
+        animate.setAttribute(
+            "rotate",
+            "auto"
+        );
+
+
+        const motionPath =
+            document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "mpath"
+            );
+
+
+        motionPath.setAttribute(
+            "href",
+            "#" + path.id
+        );
+
+
+        /*
+            Give path unique ID
+        */
+
+        const lineId =
+            "line-" +
+            Math.random()
+                .toString(36)
+                .substring(2, 9);
+
+
+        path.id = lineId;
+
+
+        motionPath.setAttribute(
+            "href",
+            "#" + lineId
+        );
+
+
+        animate.appendChild(motionPath);
+
+        dot.appendChild(animate);
+
+        svg.appendChild(dot);
 
     }
 
-});
+
+    /*
+        Draw all connections
+    */
+
+    function drawConnections() {
+
+        /*
+            Remove old lines
+        */
+
+        svg.querySelectorAll(
+            ".connection-line, .connection-dot"
+        ).forEach(function (element) {
+
+            element.remove();
+
+        });
 
 
-// =========================================
-// SMOOTH SCROLL
-// =========================================
+        connections.forEach(function (connection) {
 
-const navigationLinks =
-    document.querySelectorAll('a[href^="#"]');
-
-
-navigationLinks.forEach(function (link) {
-
-    link.addEventListener("click", function (event) {
-
-        const targetId =
-            this.getAttribute("href");
+            const start =
+                document.getElementById(
+                    connection[0]
+                );
 
 
-        if (targetId === "#") {
+            const end =
+                document.getElementById(
+                    connection[1]
+                );
+
+
+            if (start && end) {
+
+                createLine(start, end);
+
+            }
+
+        });
+
+    }
+
+
+    /*
+        Initial drawing
+    */
+
+    setTimeout(function () {
+
+        drawConnections();
+
+    }, 300);
+
+
+    /*
+        Redraw when window changes
+    */
+
+    window.addEventListener(
+        "resize",
+        function () {
+
+            drawConnections();
+
+        }
+    );
+
+
+    /*
+        Hover effect
+    */
+
+    modules.forEach(function (moduleId) {
+
+        const card =
+            document.getElementById(moduleId);
+
+
+        if (!card) {
             return;
         }
 
 
-        const target =
-            document.querySelector(targetId);
+        card.addEventListener(
+            "mouseenter",
+            function () {
+
+                card.style.zIndex = "20";
+
+            }
+        );
 
 
-        if (target) {
+        card.addEventListener(
+            "mouseleave",
+            function () {
 
-            event.preventDefault();
+                card.style.zIndex = "5";
 
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-
-        }
-
-    });
-
-});
-
-
-// =========================================
-// TEMPLATE CARD ANIMATION
-// =========================================
-
-const templateCards =
-    document.querySelectorAll(".template-card");
-
-
-const observer =
-    new IntersectionObserver(
-
-        function (entries) {
-
-            entries.forEach(function (entry) {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.style.opacity = "1";
-
-                    entry.target.style.transform =
-                        "translateY(0)";
-
-                }
-
-            });
-
-        },
-
-        {
-            threshold: 0.15
-        }
-
-    );
-
-
-templateCards.forEach(function (card) {
-
-    card.style.opacity = "0";
-
-    card.style.transform = "translateY(20px)";
-
-    card.style.transition =
-        "opacity 0.5s ease, transform 0.5s ease";
-
-    observer.observe(card);
-
-});
-
-
-// =========================================
-// TEMPLATE BUTTON CLICK
-// =========================================
-
-const templateButtons =
-    document.querySelectorAll(".template-btn");
-
-
-templateButtons.forEach(function (button) {
-
-    button.addEventListener("click", function () {
-
-        const templateName =
-            this.closest(".template-card")
-                .querySelector("h3")
-                .textContent;
-
-
-        console.log(
-            "Opening template:",
-            templateName
+            }
         );
 
     });
 
+
+    /*
+        Theme toggle
+    */
+
+    const themeButton =
+        document.getElementById("themeToggle");
+
+
+    if (themeButton) {
+
+        themeButton.addEventListener(
+            "click",
+            function () {
+
+                document.body.classList.toggle(
+                    "light-mode"
+                );
+
+                /*
+                    Redraw connections
+                    after theme change
+                */
+
+                setTimeout(
+                    drawConnections,
+                    100
+                );
+
+            }
+        );
+
+    }
+
 });
-
-
-// =========================================
-// CONSOLE MESSAGE
-// =========================================
-
-console.log(
-    "Modern SaaS UI Collection loaded successfully."
-);
