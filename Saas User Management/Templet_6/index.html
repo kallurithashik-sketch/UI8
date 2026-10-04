@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Team Command Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Top Navigation -->
+        <header class="topnav">
+            <a href="#" class="brand">
+                <span class="brand-mark">S</span>
+                <span>STACKLY</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#" class="active">Team</a>
+                <a href="#">Workspace</a>
+                <a href="#">Analytics</a>
+            </nav>
+
+            <div class="top-actions">
+                <button class="notification-btn" id="notificationBtn" aria-label="Notifications">
+                    <span>♢</span>
+                    <i></i>
+                </button>
+
+                <div class="profile">
+                    <div class="profile-avatar">AS</div>
+                    <div class="profile-info">
+                        <strong>Alex Smith</strong>
+                        <span>Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <main class="content">
+
+            <!-- Hero -->
+            <section class="hero">
+                <div>
+                    <p class="eyebrow">TEAM COMMAND CENTER</p>
+                    <h1>Good morning, Alex.</h1>
+                    <p class="hero-text">
+                        Manage your people, roles and workspace activity
+                        from one simple place.
+                    </p>
+                </div>
+
+                <button class="invite-btn" id="openModal">
+                    <span>+</span>
+                    Invite Member
+                </button>
+            </section>
+
+
+            <!-- Stats -->
+            <section class="stats-strip">
+
+                <div class="stat">
+                    <span class="stat-label">TEAM MEMBERS</span>
+                    <strong id="memberCount">12</strong>
+                    <small>+2 this month</small>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-label">PENDING INVITES</span>
+                    <strong id="inviteCount">03</strong>
+                    <small>Awaiting response</small>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-label">ACTIVE ROLES</span>
+                    <strong>04</strong>
+                    <small>Across your team</small>
+                </div>
+
+                <div class="stat capacity">
+                    <div class="capacity-top">
+                        <span class="stat-label">TEAM CAPACITY</span>
+                        <strong>80%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span></span>
+                    </div>
+
+                    <small>20% available</small>
+                </div>
+
+            </section>
+
+
+            <!-- Workspace -->
+            <section class="workspace-grid">
+
+                <!-- Members -->
+                <div class="members-panel panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <p class="section-label">DIRECTORY</p>
+                            <h2>Team Members</h2>
+                        </div>
+
+                        <button class="view-btn" id="viewToggle">
+                            ☷
+                            <span>View</span>
+                        </button>
+                    </div>
+
+
+                    <!-- Search and Filter -->
+                    <div class="filters">
+
+                        <div class="search-box">
+                            <span>⌕</span>
+                            <input
+                                type="text"
+                                id="searchInput"
+                                placeholder="Search members..."
+                            >
+                        </div>
+
+                        <select id="roleFilter">
+                            <option value="all">All roles</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Editor">Editor</option>
+                            <option value="Viewer">Viewer</option>
+                            <option value="Manager">Manager</option>
+                        </select>
+
+                    </div>
+
+
+                    <!-- Members Grid -->
+                    <div class="members-grid" id="membersGrid">
+
+                        <article
+                            class="member-card"
+                            data-name="Alex Smith"
+                            data-role="Admin"
+                        >
+                            <div class="member-top">
+                                <div class="avatar avatar-maroon">AS</div>
+
+                                <button class="more-btn">•••</button>
+                            </div>
+
+                            <div class="member-info">
+                                <h3>Alex Smith</h3>
+                                <p>alex@stackly.com</p>
+                            </div>
+
+                            <div class="member-bottom">
+                                <span class="role admin">Admin</span>
+                                <span class="status">
+                                    <i></i> Active
+                                </span>
+                            </div>
+                        </article>
+
+
+                        <article
+                            class="member-card"
+                            data-name="Jessica Davis"
+                            data-role="Editor"
+                        >
+                            <div class="member-top">
+                                <div class="avatar avatar-gold">JD</div>
+
+                                <button class="more-btn">•••</button>
+                            </div>
+
+                            <div class="member-info">
+                                <h3>Jessica Davis</h3>
+                                <p>jessica@stackly.com</p>
+                            </div>
+
+                            <div class="member-bottom">
+                                <span class="role editor">Editor</span>
+                                <span class="status">
+                                    <i></i> Active
+                                </span>
+                            </div>
+                        </article>
+
+
+                        <article
+                            class="member-card"
+                            data-name="Michael King"
+                            data-role="Viewer"
+                        >
+                            <div class="member-top">
+                                <div class="avatar avatar-green">MK</div>
+
+                                <button class="more-btn">•••</button>
+                            </div>
+
+                            <div class="member-info">
+                                <h3>Michael King</h3>
+                                <p>michael@stackly.com</p>
+                            </div>
+
+                            <div class="member-bottom">
+                                <span class="role viewer">Viewer</span>
+                                <span class="status">
+                                    <i></i> Active
+                                </span>
+                            </div>
+                        </article>
+
+
+                        <article
+                            class="member-card"
+                            data-name="Ryan Parker"
+                            data-role="Editor"
+                        >
+                            <div class="member-top">
+                                <div class="avatar avatar-orange">RP</div>
+
+                                <button class="more-btn">•••</button>
+                            </div>
+
+                            <div class="member-info">
+                                <h3>Ryan Parker</h3>
+                                <p>ryan@stackly.com</p>
+                            </div>
+
+                            <div class="member-bottom">
+                                <span class="role editor">Editor</span>
+                                <span class="status">
+                                    <i></i> Active
+                                </span>
+                            </div>
+                        </article>
+
+
+                        <article
+                            class="member-card"
+                            data-name="Sophia Wilson"
+                            data-role="Manager"
+                        >
+                            <div class="member-top">
+                                <div class="avatar avatar-blue">SW</div>
+
+                                <button class="more-btn">•••</button>
+                            </div>
+
+                            <div class="member-info">
+                                <h3>Sophia Wilson</h3>
+                                <p>sophia@stackly.com</p>
+                            </div>
+
+                            <div class="member-bottom">
+                                <span class="role manager">Manager</span>
+                                <span class="status">
+                                    <i></i> Active
+                                </span>
+                            </div>
+                        </article>
+
+
+                        <article
+                            class="member-card"
+                            data-name="Daniel Brown"
+                            data-role="Viewer"
+                        >
+                            <div class="member-top">
+                                <div class="avatar avatar-purple">DB</div>
+
+                                <button class="more-btn">•••</button>
+                            </div>
+
+                            <div class="member-info">
+                                <h3>Daniel Brown</h3>
+                                <p>daniel@stackly.com</p>
+                            </div>
+
+                            <div class="member-bottom">
+                                <span class="role viewer">Viewer</span>
+                                <span class="status">
+                                    <i></i> Active
+                                </span>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <p class="no-results" id="noResults">
+                        No members found.
+                    </p>
+
+                </div>
+
+
+                <!-- Activity -->
+                <aside class="activity-panel panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <p class="section-label">TIMELINE</p>
+                            <h2>Recent Activity</h2>
+                        </div>
+
+                        <button class="dots-btn">•••</button>
+                    </div>
+
+
+                    <div class="activity-list">
+
+                        <div class="activity-item">
+                            <div class="activity-icon maroon-icon">+</div>
+
+                            <div>
+                                <p>
+                                    <strong>Alex</strong> added
+                                    Jessica to the team.
+                                </p>
+
+                                <span>2 minutes ago</span>
+                            </div>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <div class="activity-icon gold-icon">↗</div>
+
+                            <div>
+                                <p>
+                                    <strong>Jessica</strong> updated
+                                    her role to Editor.
+                                </p>
+
+                                <span>24 minutes ago</span>
+                            </div>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <div class="activity-icon green-icon">✓</div>
+
+                            <div>
+                                <p>
+                                    <strong>Ryan</strong> accepted
+                                    an invitation.
+                                </p>
+
+                                <span>1 hour ago</span>
+                            </div>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <div class="activity-icon orange-icon">+</div>
+
+                            <div>
+                                <p>
+                                    <strong>Sophia</strong> joined
+                                    the workspace.
+                                </p>
+
+                                <span>3 hours ago</span>
+                            </div>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <div class="activity-icon blue-icon">↻</div>
+
+                            <div>
+                                <p>
+                                    Team permissions were updated.
+                                </p>
+
+                                <span>Yesterday</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <button class="activity-btn" id="activityBtn">
+                        View all activity
+                        <span>→</span>
+                    </button>
+
+                </aside>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- Invite Modal -->
+    <div class="modal-overlay" id="modal">
+
+        <div class="modal">
+
+            <button class="close-btn" id="closeModal">×</button>
+
+            <p class="section-label">NEW MEMBER</p>
+
+            <h2>Invite someone</h2>
+
+            <p class="modal-text">
+                Add a new person to your Stackly workspace.
+            </p>
+
+            <form id="inviteForm">
+
+                <label>
+                    Full name
+                    <input
+                        type="text"
+                        id="newName"
+                        placeholder="e.g. Emma Watson"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Email address
+                    <input
+                        type="email"
+                        id="newEmail"
+                        placeholder="emma@example.com"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Role
+
+                    <select id="newRole">
+                        <option value="Viewer">Viewer</option>
+                        <option value="Editor">Editor</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                </label>
+
+                <button type="submit" class="submit-btn">
+                    Send Invitation
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span>✓</span>
+        <p>Invitation sent successfully.</p>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
