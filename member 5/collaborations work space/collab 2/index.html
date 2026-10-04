@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>UI 8 Workspace - Blueprint</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sheet">
+
+    <!-- HEADER -->
+    <header class="bar">
+
+        <div class="mark">
+            <span>8</span>
+            UI 8 Workspace
+        </div>
+
+        <nav class="tabs"
+             role="tablist"
+             aria-label="Sheets">
+
+            <button
+                role="tab"
+                aria-selected="true"
+                data-s="plan">
+                Plan
+            </button>
+
+            <button
+                role="tab"
+                aria-selected="false"
+                data-s="tasks">
+                Tasks
+            </button>
+
+            <button
+                role="tab"
+                aria-selected="false"
+                data-s="team">
+                Team
+            </button>
+
+        </nav>
+
+        <button class="ghost" id="theme">
+            Switch to paper
+        </button>
+
+    </header>
+
+
+    <!-- MAIN BODY -->
+    <div class="body">
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+            <!-- PLAN VIEW -->
+            <section
+                class="view on"
+                id="v-plan">
+
+                <h1>
+                    Four projects, one sheet.
+                </h1>
+
+                <p class="lead">
+                    Each drawing shows how far a project has come.
+                    Select Add progress when your part is done.
+                </p>
+
+                <div
+                    class="drawings"
+                    id="draw">
+                </div>
+
+            </section>
+
+
+            <!-- TASKS VIEW -->
+            <section
+                class="view"
+                id="v-tasks">
+
+                <h1>
+                    Task list
+                </h1>
+
+                <p class="lead">
+                    Tick a task to stamp it as approved.
+                </p>
+
+                <form
+                    class="add"
+                    id="addf">
+
+                    <input
+                        id="ti"
+                        type="text"
+                        placeholder="Describe a new task"
+                        aria-label="New task"
+                    >
+
+                    <button class="btn">
+                        Add task
+                    </button>
+
+                </form>
+
+                <ul
+                    class="tl"
+                    id="tl">
+                </ul>
+
+            </section>
+
+
+            <!-- TEAM VIEW -->
+            <section
+                class="view"
+                id="v-team">
+
+                <h1>
+                    Team
+                </h1>
+
+                <p class="lead">
+                    Select Ping to send a quick nudge.
+                </p>
+
+                <div
+                    class="people"
+                    id="ppl">
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- RIGHT SIDEBAR -->
+        <aside
+            class="title"
+            aria-label="Title block">
+
+            <table>
+
+                <tr>
+                    <th>Project</th>
+                    <td>Launch week</td>
+                </tr>
+
+                <tr>
+                    <th>Drawn by</th>
+                    <td>You, developer</td>
+                </tr>
+
+                <tr>
+                    <th>Date</th>
+                    <td id="dt"></td>
+                </tr>
+
+                <tr>
+                    <th>Revision</th>
+                    <td id="rev">A</td>
+                </tr>
+
+                <tr>
+                    <th>Open tasks</th>
+                    <td id="open">0</td>
+                </tr>
+
+                <tr>
+                    <th>Team online</th>
+                    <td>4 of 4</td>
+                </tr>
+
+            </table>
+
+
+            <!-- CHANGE LOG -->
+            <h2>
+                Change log
+            </h2>
+
+            <ol
+                id="log"
+                aria-live="polite">
+            </ol>
+
+        </aside>
+
+    </div>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
