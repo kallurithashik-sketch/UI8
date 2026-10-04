@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Account Settings - Template 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <div class="brand-icon">S</div>
+        <span>Stackly</span>
+    </div>
+
+    <nav class="top-nav">
+        <a href="#">Dashboard</a>
+        <a href="#">Projects</a>
+        <a href="#">Team</a>
+        <a href="#" class="active">Settings</a>
+    </nav>
+
+    <div class="user-menu">
+        <button id="userButton" class="user-button">
+            <div class="mini-avatar">AS</div>
+            <span>Alex Smith</span>
+            <span>⌄</span>
+        </button>
+
+        <div id="userDropdown" class="dropdown">
+            <a href="#">Profile</a>
+            <a href="#">Billing</a>
+            <button id="logoutBtn">Log out</button>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="page-heading">
+        <div>
+            <p class="eyebrow">ACCOUNT</p>
+            <h1>Account Settings</h1>
+            <p>Manage your profile, security, preferences and notifications.</p>
+        </div>
+
+        <button class="save-all" id="saveAllBtn">
+            Save changes
+        </button>
+    </section>
+
+    <section class="profile-banner">
+        <div class="profile-avatar">AS</div>
+
+        <div class="profile-info">
+            <h2>Alex Smith</h2>
+            <p>Product Designer · alex@example.com</p>
+            <span class="status">
+                <span class="status-dot"></span>
+                Active account
+            </span>
+        </div>
+
+        <button class="outline-btn" id="editProfileBtn">
+            Edit profile
+        </button>
+    </section>
+
+    <div class="settings-grid">
+
+        <!-- Profile -->
+        <section class="settings-card wide">
+            <div class="card-header">
+                <div>
+                    <h2>Personal information</h2>
+                    <p>Update your basic account information.</p>
+                </div>
+                <span class="card-icon">👤</span>
+            </div>
+
+            <div class="form-grid">
+                <div class="field">
+                    <label>First name</label>
+                    <input type="text" id="firstName" value="Alex">
+                </div>
+
+                <div class="field">
+                    <label>Last name</label>
+                    <input type="text" id="lastName" value="Smith">
+                </div>
+
+                <div class="field full">
+                    <label>Email address</label>
+                    <input type="email" value="alex@example.com">
+                </div>
+
+                <div class="field full">
+                    <label>Job title</label>
+                    <input type="text" value="Product Designer">
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <button class="primary-btn" id="profileSave">
+                    Save profile
+                </button>
+            </div>
+        </section>
+
+        <!-- Security -->
+        <section class="settings-card">
+            <div class="card-header">
+                <div>
+                    <h2>Security</h2>
+                    <p>Protect your account.</p>
+                </div>
+                <span class="card-icon">🔐</span>
+            </div>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Password</strong>
+                    <small>Last changed 30 days ago</small>
+                </div>
+                <button class="text-btn" id="passwordBtn">Change</button>
+            </div>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Two-factor authentication</strong>
+                    <small>Add an extra layer of security.</small>
+                </div>
+
+                <label class="switch">
+                    <input type="checkbox" id="twoFactor">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Login alerts</strong>
+                    <small>Notify me about new logins.</small>
+                </div>
+
+                <label class="switch">
+                    <input type="checkbox" id="loginAlerts" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Notifications -->
+        <section class="settings-card">
+            <div class="card-header">
+                <div>
+                    <h2>Notifications</h2>
+                    <p>Choose what you want to receive.</p>
+                </div>
+                <span class="card-icon">🔔</span>
+            </div>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Product updates</strong>
+                    <small>News about new features.</small>
+                </div>
+
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Team activity</strong>
+                    <small>Updates from your workspace.</small>
+                </div>
+
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Weekly summary</strong>
+                    <small>Receive a weekly activity report.</small>
+                </div>
+
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Preferences -->
+        <section class="settings-card">
+            <div class="card-header">
+                <div>
+                    <h2>Preferences</h2>
+                    <p>Customize your workspace experience.</p>
+                </div>
+                <span class="card-icon">⚙️</span>
+            </div>
+
+            <div class="field">
+                <label>Language</label>
+                <select>
+                    <option>English</option>
+                    <option>Hindi</option>
+                    <option>Tamil</option>
+                    <option>French</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Timezone</label>
+                <select>
+                    <option>Asia/Kolkata (IST)</option>
+                    <option>Europe/London</option>
+                    <option>America/New_York</option>
+                    <option>Asia/Tokyo</option>
+                </select>
+            </div>
+
+            <div class="theme-section">
+                <label>Appearance</label>
+
+                <div class="theme-buttons">
+                    <button class="theme-btn active" data-theme="light">
+                        ☀ Light
+                    </button>
+
+                    <button class="theme-btn" data-theme="dark">
+                        🌙 Dark
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Danger Zone -->
+        <section class="settings-card danger-card">
+            <div class="card-header">
+                <div>
+                    <h2>Account actions</h2>
+                    <p>Manage your account status.</p>
+                </div>
+                <span class="card-icon">⚠️</span>
+            </div>
+
+            <div class="danger-action">
+                <div>
+                    <strong>Deactivate account</strong>
+                    <small>Your account can be restored later.</small>
+                </div>
+
+                <button class="danger-btn" id="deactivateBtn">
+                    Deactivate
+                </button>
+            </div>
+
+            <div class="danger-action">
+                <div>
+                    <strong>Delete account</strong>
+                    <small>This action cannot be undone.</small>
+                </div>
+
+                <button class="danger-btn" id="deleteBtn">
+                    Delete
+                </button>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<div id="toast" class="toast">
+    Changes saved successfully.
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
